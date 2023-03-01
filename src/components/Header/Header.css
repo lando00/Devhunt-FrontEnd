@@ -1,0 +1,66 @@
+header{
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    width: calc(100vw - 250px);
+    height: 55px;
+    background-color: #ffffff;
+    position : sticky;
+    top : 0;
+    box-shadow: 0px 1px 2px rgb(0 0 0 / 10%);
+}
+
+header .icon-avatar{
+    width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+header .icon-arrow{
+    cursor: pointer;
+}
+
+header .icon{
+    align-self: center ;
+    margin-right: 25px;
+}
+
+header .iconMenu, header .iconSearch{
+    width: 1rem;
+}
+
+header .iconSearch{
+    margin: 5px;
+}
+
+header input{
+    margin-right: auto;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.3rem;
+    font-size: 0.875rem;
+    border: none;
+    outline: none;
+    width: 200px;
+    background-color: transparent;
+}
+
+
+header .user-connected{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-connected .info-user{
+    display: flex;
+    flex-direction: column;
+    margin : 0px 8px;
+    cursor: pointer;
+}
+
+.info-user .nom {
+    font-size: 0.8rem;
+    color: #6c757D;
+    font-weight: 550;
+    cursor : pointer;
+}

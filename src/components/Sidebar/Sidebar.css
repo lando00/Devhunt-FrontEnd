@@ -1,0 +1,88 @@
+.sidebar{
+    width: 250px;
+    height: 100%;
+    background-color: #111827;
+    color: var(--couleur-font);
+    position: fixed;
+}
+
+.sidebar .logo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding : 10px 0px
+}
+
+.logo img{
+    width: 100px;
+}
+
+.menu .item{
+    list-style-type: none;   
+}
+
+.menu .item a{
+    text-decoration: none;
+    color : var(--couleur-font);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-end;
+    padding: 12px 25px;
+    transition: all .25s;
+}
+
+.item .icon{
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.icon{
+    width: 1.2rem;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+
+.link-active{
+    background: #242a38;
+    color: #fff!important;
+}
+
+
+.icon-arrow{
+    margin-left: auto;
+    width: 0.6rem;
+    align-self: center;
+}
+
+.menu .item:hover a .icon-arrow{
+    transform: rotate(-90deg);
+}
+
+
+.sous-menu{
+ height: 0px;
+ padding-left: 42px ;
+ overflow: hidden;
+ transition: height 0.25s linear;
+ background: #242a38;
+}
+
+
+.menu .item a:hover{
+    background: #242a38;
+    color: #fff;
+}
+
+.sous-menu .item a, .sous-menu .item a:hover{
+    padding: 10px 20px;
+    background-color: transparent;
+    cursor : pointer;
+    
+}
+
+.show{
+    height: 80px;
+}
