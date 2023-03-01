@@ -16,12 +16,12 @@ export default function Login() {
           <label htmlFor="">Remember Me</label>
           <span>Forgot Your Password?</span>
         </p>
-        
-        <button type='button'>
-          <Link to="/app/dashboard">Login</Link>
-        </button>
+
+        <Link to="/app/dashboard">
+            Login
+        </Link>
         <p className='createAccount'>Not registered? Create an account</p>
-        
+
       </div>
     </div>
   )

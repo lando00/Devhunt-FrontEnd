@@ -6,8 +6,8 @@ import Login from './Login/Login';
 export default function Authentification() {
   return (
     <div className='authentification'>
-        <HeaderAuth />
-        <Login />
+      <HeaderAuth />
+      <Login />
     </div>
   )
 }
