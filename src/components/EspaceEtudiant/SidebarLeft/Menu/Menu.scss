@@ -22,17 +22,20 @@
                 &:hover{
                     color: #2d6ff7!important
                 } 
+
+                span{
+                    margin-left: 15px;
+                    font-size: bolder;
+                }
             }
 
-            &:nth-child(2){
+            &:nth-child(1){
                 a{
                     color: #2d6ff7!important
                 }
             }
 
-            span{
-                margin-left: 15px;
-            }
+            
         }
     }
 }
