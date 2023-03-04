@@ -2,30 +2,82 @@
 .sidebar-right {
   width: 25%;
   background-color: inherit;
-  padding: .5em 1em;
-
-  .question {
-    display: flex;
-    padding: .4em .8em;
-    gap: .1em;
-    .item{
+  padding-top: 1em ;
+  padding-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: .5em;
+  overflow: auto;
+  .containe{
+    background-color: #fff;
+    border-radius: 20px;
+    width: 250px;
+    position: fixed;
+    top: 71px;
+    padding: .2em .8em;
+    gap: .5em;
+    .question {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1em 0;
+      .item{
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        border: .1em solid #ddd;
+        padding: .5em 1em;
+        .txt-question{
+          font-size: .9em;
+          color: $blue;
+        }
+        .txt-answer{
+          font-size: .9em;
+          color: #f05555;
+        }
+        span{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.1;
+          font-weight: bold;
+          color: $black;
+        }
+      }
+    }
+    .tag{
       display: flex;
       flex-direction: column;
-      gap: .5em;
-      // border: .1em solid #333;
-      box-shadow: 0 .1em .2em #3d3c3ca1;
-      padding: 1em 2em;
-      .txt{
-        font-size: .9em;
-        color: $blue;
-      }
-      span{
+      .head-tag{
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.1;
-        font-weight: bold;
-        color: $black;
+        font-size: .9em;
+        background-color: $blue;
+        border-radius: .5em;
+        padding: .4em .8em;
+        color: #fff;
+      }
+      .tag-containe{
+        display: flex;
+        flex-wrap: wrap;
+        gap: .3em;
+        padding: .5em 1em;
+        border-radius:  0 0 .5em .5em;
+        .item-tag{
+          font-size: .75em;
+          padding: .4em .8em;
+          border-radius: .5em;
+          transition: background-color .5s;
+          &:hover{
+            background-color: $black;
+            color: $white-background;
+          }
+          &:active{
+            scale: .9;
+          }
+        }
       }
     }
   }

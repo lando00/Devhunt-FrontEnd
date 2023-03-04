@@ -1,120 +1,165 @@
+@import '../../../assets/Color.scss';
+
 .actuality {
   display: flex;
   flex-direction: column;
 
+
   .head-actuality {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 5px;
-    padding: 5px 10px;
+    border-bottom: 1px solid $white-background;
+    font-weight: bold;
     text-transform: capitalize;
-    box-shadow: 0 3px 4px #333;
+    font-size: .9rem;
 
     .item {
-      padding: 5px 10px;
+      padding: 20px 0px;
+      margin-left: 15px;
+      cursor: pointer;
+      transition: color .3s;
+
+      a {
+        // padding: 15px 10px;
+        // color: $black;
+        color: #7c7f85;
+        text-decoration: none;
+      }
+
+      &:hover {
+        border-bottom: 3px solid $black;
+
+        a {
+          color: $black;
+        }
+      }
+    }
+
+    .item-active {
+      border-bottom: 3px solid $black;
+
+      a {
+        color: $black !important;
+      }
+
     }
   }
 
   .containe-actuality {
     display: flex;
     flex-direction: column;
-    overflow: auto;
-    height: 88vh;
-    padding: 10px 20px 45px 20px;
     gap: .5em;
 
     .actuality-item {
       display: flex;
       gap: 1.4em;
-      padding: 10px 20px;
-      box-shadow: 0 .1em .2em #333;
+      padding: 25px 20px;
       border-radius: .2em;
+      border-bottom: 1px solid $white-background;
 
       .pdp {
         width: 50px !important;
         height: 50px !important;
         border-radius: 100%;
-        background-color: #333;
-        padding: 5px 10px;
       }
 
       .detail-post {
         display: flex;
         flex-direction: column;
+        gap: .5em;
+
 
         .head-post {
           display: flex;
           gap: 10px;
+          align-items: center;
 
           .name {
             text-transform: capitalize;
             color: rgb(71, 71, 233);
             font-weight: bold;
-            font-size: .9em;
+            font-size: .95em;
           }
-        }
-      }
-
-      .detail {
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-
-        .tittle {
-          display: flex;
-          gap: 10px;
-          font-size: 20px;
-          font-weight: bold;
-          align-items: center;
-          .resolved{
-            font-size: .6em;
-            background-color: rgb(10, 207, 10);
-            padding: 4px 8px;
-            border-radius: .5em;
-            color: #fff;
-          }
-          .not-resolved{
-            color: #fff;
-            font-size: .6em;
-            background-color: rgb(184, 28, 28);
-            padding: 4px 8px;
-            border-radius: .5em;
-          }
-        }
-        .post{
-          font-size: .9em;
-        }
-        .replay{
-          display: flex;
-          background-color: #eee;
-          padding: .5em 1em;
-          justify-content: space-between;
-          align-items: center;
-          .comment{
-            width: 4em;
-            height: 2em;
-            background-color: #333;
-          }
-          .answer{
+          .date{
             font-size: .8em;
-            color: #fff;
-            padding: .5em 1em;
-            background-color: #999;
-            border-radius: .5em;
-            &:hover{
-              background-color: #666;
-              color: #eee;
+          }
+        }
+
+        .detail {
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+          flex-wrap: wrap;
+
+          .tittle {
+            display: flex;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            align-items: center;
+            color: $black;
+
+            .resolved {
+              font-size: .6em;
+              background-color: rgb(10, 207, 10);
+              padding: 4px 8px;
+              border-radius: .5em;
+              color: #fff;
+            }
+
+            .not-resolved {
+              color: #fff;
+              font-size: .6em;
+              background-color: rgb(184, 28, 28);
+              padding: 4px 8px;
+              border-radius: .5em;
             }
           }
-          .replay-post{
-            font-size: .8em;
-            background-color: #555;
+
+          .post {
+            font-size: 15px;
+            line-height: 30px;
+            color: $color-text;
+          }
+
+          .replay {
+            display: flex;
             padding: .5em 1em;
-            color: #fff;
-            border-radius: .2em;
-            &:hover{
-              background-color: #222;
-              color: #eee;
+            align-items: center;
+            justify-content: flex-end;
+            gap: .4em;
+
+            .comment {
+              width: 4em;
+              height: 2em;
+              background-color: #333;
+            }
+
+            .answer {
+              font-size: .8em;
+              color: #fff;
+              padding: .5em 1em;
+              background-color: #999;
+              border-radius: .5em;
+
+              &:hover {
+                background-color: #666;
+                color: #eee;
+              }
+            }
+
+            .replay-post {
+              font-size: .8em;
+              background-color: #555;
+              padding: .5em 1em;
+              color: #fff;
+              border-radius: .5em;
+
+              &:hover {
+                background-color: #222;
+                color: #eee;
+              }
             }
           }
         }
