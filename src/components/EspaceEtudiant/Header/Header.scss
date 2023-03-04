@@ -1,3 +1,4 @@
+@import '../../../assets/Color.scss';
 .header {
   height: auto;
   background-color: #fff;
@@ -16,9 +17,10 @@
     font-size: 2em;
     font-weight: bolder;
     padding: .3em 1em;
-    background : linear-gradient(50deg ,#eee , #5f1b25  );
+    // background: #5f1b25;
+    background: linear-gradient(90deg ,#5f1b256e , #5f1b25);
     border-radius:.3em .5em .3em .5em;
-    color: #ffe;
+    color: #eee;
   }
 
   .search {
@@ -79,6 +81,7 @@
         text-transform: capitalize;
         font-weight: bold;
         font-size: .9em;
+        color: $black;
       }
       .level{
         font-size: .8em;
