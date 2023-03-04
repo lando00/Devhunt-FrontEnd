@@ -1,4 +1,53 @@
 .header{
-    height: 65px;
-    background-color: red;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    position: sticky;
+    top: 0;
+    padding: 5px 175px;
+
+    .logo-aeeni{
+        width: 50px;
+        height: 50px;   
+    }
+
+    .search{
+        margin: auto;
+        position: relative;
+        background-color: hsl(252, 30%, 95%);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        padding-left: 15px;
+
+        .icon-search{
+            color : hsl(252, 15%, 65%)
+        }
+
+        input{
+            height: 32px;
+            width: 30vw;
+            outline: none;
+            border: none;
+            padding-left: 8px;
+            background-color: transparent;
+            font-size: 0.9rem;
+
+            &::placeholder{
+                color : hsl(252, 15%, 65%)
+            }
+        }
+
+    }
+
+    
+
+    .user-info{
+        align-self: center;
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
 }
