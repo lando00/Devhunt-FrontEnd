@@ -1,10 +1,10 @@
 import React from 'react'
 import './Section.scss'
-import Actuality from '../Actuality/Actuality'
+import { Outlet } from 'react-router'
 export default function Section() {
   return (
     <div className='section'>
-      <Actuality />
+      <Outlet />
     </div>
   )
 }

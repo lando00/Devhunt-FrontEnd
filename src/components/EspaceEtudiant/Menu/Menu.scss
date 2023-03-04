@@ -1,0 +1,41 @@
+.menu{
+    width: 250px;
+    height: auto;
+    background-color: white;
+    margin-left: auto;
+    border-radius: 20px;
+
+    ul{
+        padding: 15px 0px;
+        li{
+            list-style-type: none;
+            padding: 15px 35px;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+
+            
+
+            a{
+                text-decoration: none;
+                color: #26333b;
+                &:hover{
+                    color: #2d6ff7!important
+                } 
+
+                span{
+                    margin-left: 15px;
+                    font-size: bolder;
+                }
+            }
+
+            &:nth-child(1){
+                a{
+                    color: #2d6ff7!important
+                }
+            }
+
+            
+        }
+    }
+}
