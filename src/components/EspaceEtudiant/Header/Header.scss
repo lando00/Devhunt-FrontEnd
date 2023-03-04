@@ -4,11 +4,21 @@
   display: flex;
   position: sticky;
   top: 0;
-  padding: 5px 175px;
+  padding: 5px 150px;
+  align-items: center;
 
   .logo-aeeni {
     width: 50px;
     height: 50px;
+  }
+
+  .name-platforme {
+    font-size: 2em;
+    font-weight: bolder;
+    padding: .3em 1em;
+    background : linear-gradient(50deg ,#eee , #5f1b25  );
+    border-radius:.3em .5em .3em .5em;
+    color: #ffe;
   }
 
   .search {
@@ -44,18 +54,35 @@
     align-items: center;
     align-self: center;
     gap: 10px;
-    .notif{
-      width: 3em;
-      height: 3em;
+
+    .notif {
+      width: 2em;
+      height: 2em;
       background-image: url('../../../assets/icon/notification.svg');
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
     }
+
     img {
       width: 40px;
       height: 40px;
       border-radius: 50%;
+    }
+
+    .detail-user {
+      display: flex;
+      flex-direction: column;
+      padding: .3em .6em;
+
+      .detail {
+        text-transform: capitalize;
+        font-weight: bold;
+        font-size: .9em;
+      }
+      .level{
+        font-size: .8em;
+      }
     }
   }
 }

@@ -1,14 +1,15 @@
-.container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 
-    .contain{
-        display: flex;
-        flex: 1;
-        gap: .5em;
-        background-color: hsl(252, 30%, 95%);
-        padding-top: 15px;
-    }  
+  .contain {
+    display: flex;
+    flex: 1;
+    gap: .5em;
+    background-color: hsl(252, 30%, 95%);
+    padding-top: 15px;
+    overflow: hidden;
+  }
 }
