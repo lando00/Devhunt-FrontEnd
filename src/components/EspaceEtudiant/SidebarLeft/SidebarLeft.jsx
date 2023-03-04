@@ -1,10 +1,11 @@
 import React from 'react'
 import './SidebarLeft.scss'
+import Menu from './Menu/Menu'
 
 export default function SidebarLeft() {
   return (
     <div className='sidebar-left'>
-      <h1>SidebarLeft</h1>
+      <Menu />
     </div>
   )
 }
