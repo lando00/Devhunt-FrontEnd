@@ -1,0 +1,35 @@
+.Notification{
+  background-color: #fff;
+  border-radius: 15px;
+  flex: 1;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+  gap: 10px;
+  overflow-y: auto;
+  .notif{
+    display: flex;
+    background-color: #eeeef3;
+    border-radius: 10px;
+    gap: 3%;
+    align-items: center;
+    padding: 10px 5px;
+
+    .image{
+      background-image: url(../../../assets/avatars/face-1.jpg);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-size: contain;
+    }
+    .messg{
+      .name{
+        font-weight: 600;
+      }
+      .action{
+        font-size: 15px;
+      }
+    }
+  }
+}
