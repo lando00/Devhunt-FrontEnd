@@ -1,7 +1,7 @@
 import React from 'react'
 import DashboardContainer from './components/DashboardContainer/DashboardContainer'
 import Authentification from './components/Authentification/Authentification'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Tables from './components/Tables/Tables'
 import Products from './components/Products/Products'
 import Dashboard from './components/Dashboard/Dashboard'
@@ -11,7 +11,7 @@ import AddUser from './components/Users/AddUser/AddUser'
 import UpdateUser from './components/Users/UpdateUser/UpdateUser'
 
 function App() {
-  return (        
+  return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Authentification />} />

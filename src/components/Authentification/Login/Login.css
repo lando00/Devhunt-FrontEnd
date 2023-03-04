@@ -1,104 +1,107 @@
-.loginContainer{
-    width: 100%;
-    height: calc(100% - 60px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.loginContainer {
+  width: 100%;
+  height: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loginContainer .login{
-    width: 420px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+.loginContainer .login {
+  width: 420px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.login h2{
-    margin-bottom: 1.2rem;
+.login h2 {
+  margin-bottom: 1.2rem;
 }
 
-.login p{
-    margin-bottom: 10px;
+.login p {
+  margin-bottom: 10px;
 }
 
-.login input[type="text"], .login input[type="password"]{
-    margin-bottom: 12px;
-    padding: 12px;
-    outline: none;
-    background-color: #e5e7eb;
-    border: 1px solid #d3d5d8;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    color : #5d646d;
-    transition: border-color 0.15s ease-in-out;
+.login input[type="text"],
+.login input[type="password"] {
+  margin-bottom: 12px;
+  padding: 12px;
+  outline: none;
+  background-color: #e5e7eb;
+  border: 1px solid #d3d5d8;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #5d646d;
+  transition: border-color 0.15s ease-in-out;
 }
 
-.login input[type="text"]:focus, .login input[type="password"]:focus{
-    border-color: #007bff;
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+  border-color: #007bff;
 }
 
-.login .remember{
-    display: flex;
-    margin-top: 10px ;
-}
-
-
-.login label{
-    margin-right: auto;
-    margin-left: 5px;
+.login .remember {
+  display: flex;
+  margin-top: 10px;
 }
 
 
-.login a{
-    padding: 8px 0px;
-    text-align: center;
-    font-size: 1rem;
-    background-color: #007bff;
-    border: 1px solid #007bff;
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+.login label {
+  margin-right: auto;
+  margin-left: 5px;
 }
-.login a:active{
-    scale: .9;
+
+
+.login a {
+  padding: 8px 0px;
+  text-align: center;
+  font-size: 1rem;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.login a:active {
+  scale: .9;
 }
 
 .login a {
-    color : #fff;
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-    height: 100%;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
-.login button:hover{
-    background-color: #0078c1;
-    border-color: #0070b4
+.login button:hover {
+  background-color: #0078c1;
+  border-color: #0070b4
 }
 
-.login button:active{
-    box-shadow: 0 0 0 0.2rem rgb(61 127 255 / 50%);
+.login button:active {
+  box-shadow: 0 0 0 0.2rem rgb(61 127 255 / 50%);
 }
 
-.createAccount{
-    text-align: center;
+.createAccount {
+  text-align: center;
 }
 
-.login p{
-    color : #5d646d;
-    font-size: 0.9rem;
+.login p {
+  color: #5d646d;
+  font-size: 0.9rem;
 }
 
-.login .label{
-    font-size: 1rem;
-    color: #333;
+.login .label {
+  font-size: 1rem;
+  color: #333;
 }
 
-.login h1{
-    text-align: center;
-    color: #007bff;
-    margin-bottom: 35px;
+.login h1 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 35px;
 }

@@ -1,6 +1,11 @@
+.add-user{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 .add-user h1{
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     width: 100%;
-    height: auto;
-    color: #566a7f; 
+    /* height: auto; */
+    color: #566a7f;
 }

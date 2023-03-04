@@ -27,3 +27,6 @@
     border-radius: 5px;
     color : #fff;
 }
+.headerAuth .log-in:active{
+    scale: .9;
+}

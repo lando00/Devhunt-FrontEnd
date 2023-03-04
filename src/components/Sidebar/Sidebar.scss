@@ -1,0 +1,97 @@
+.sidebar {
+  width: 15em;
+  height: 100%;
+  background-color: #111827;
+  color: var(--couleur-font);
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em 0;
+    width: 8em;
+    height: 8em;
+    background-image: url('../../assets/icon/logo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      display: flex;
+      text-decoration: none;
+      color: var(--couleur-font);
+      font-size: .95em;
+      padding: 1em 2em;
+      transition: all .5s;
+
+      .icon {
+        margin-right: 1rem;
+        cursor: pointer;
+        width: 1.2rem;
+        align-self: flex-start;
+      }
+
+      &:hover {
+        background: #242a38;
+        color: #fff;
+
+        .icon-arrow {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
+    .btn-sous-menu {
+      flex-direction: column;
+
+      .btn-containe {
+        display: flex;
+        align-items: center;
+
+        .icon-arrow {
+          display: flex;
+          align-items: center;
+          transition: all 1s;
+          width: 1em;
+          height: 1em;
+          background-image: url('../../assets/icon/arrow.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+
+      &:hover {
+        background: inherit;
+        color: inherit;
+
+        .icon-arrow {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
+    .sous-menu {
+      height: 0px;
+      overflow: hidden;
+      transition: all 0.5s linear;
+      padding: 0;
+    }
+
+    .show {
+      height: 6em;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .active {
+      background: #38445f;
+      color: #fff !important;
+    }
+  }
+}
