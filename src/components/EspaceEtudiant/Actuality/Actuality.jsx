@@ -38,9 +38,9 @@ export default function Actuality() {
   return (
     <div className='actuality'>
       <div className="head-actuality">
-        <div className="item">Recente Question</div>
+        <div className="item">Question Recente</div>
         <div className="item">Populaires </div>
-        <div className="item">Plus visité</div>
+        <div className="item">Plus visitées</div>
       </div>
       <div className="containe-actuality">
         {Actu}

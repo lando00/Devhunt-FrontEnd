@@ -4,7 +4,7 @@ import Actuality from '../Actuality/Actuality'
 export default function Section() {
   return (
     <div className='section'>
-      <Actuality></Actuality>
+      <Actuality />
     </div>
   )
 }

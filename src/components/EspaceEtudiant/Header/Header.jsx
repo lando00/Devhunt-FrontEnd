@@ -12,7 +12,9 @@ export default function Header() {
           <input type="text" placeholder='Recherche...' />
         </div>
         <div className="user-info">
+          <div className="notif" />
           <img src={avatar} alt="image avatar" />
+          <div className="name">Team Const</div>
         </div>
     </div>
   )
