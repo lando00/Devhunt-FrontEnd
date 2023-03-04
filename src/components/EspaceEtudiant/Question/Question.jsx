@@ -23,8 +23,7 @@ export default function Question() {
 
   return (
     <div>
-<<<<<<< HEAD
-      <form>
+     <form>
     	  <label htmlFor="titre">Titre</label>
 	      <input type="text" id="titre" name="titre" placeholder="Titre.." />
         
@@ -38,8 +37,7 @@ export default function Question() {
 
 	      <button type="submit">Publier</button>
       </form>
-=======
->>>>>>> refs/remotes/origin/main
+
     </div>
   )
 }
