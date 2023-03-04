@@ -8,7 +8,6 @@ import Answer from './components/EspaceEtudiant/Answer/Answer'
 import Profil from './components/EspaceEtudiant/Profil/Profil'
 import Header from './components/EspaceEtudiant/Header/Header'
 
-d
 function App() {
   return (
     <BrowserRouter>
