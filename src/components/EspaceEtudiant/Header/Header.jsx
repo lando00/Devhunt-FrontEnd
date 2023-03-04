@@ -6,8 +6,7 @@ import avatar from '../../../assets/avatars/face-1.jpg'
 export default function Header() {
   return (
     <div className='header'>
-      <div className="name-platforme">ENIfanampy</div>
-      {/* <img className='logo-aeeni' src={logoAeeni} alt="logo aeeni" /> */}
+      <img className='logo-aeeni' src={logoAeeni} alt="logo aeeni" />
       <div className="search">
         <i className='fab fa-sistrix icon-search'></i>
         <input type="text" placeholder='Recherche...' />
