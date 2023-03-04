@@ -1,9 +1,10 @@
 import React from 'react'
 import './Section.scss'
+import Actuality from '../Actuality/Actuality'
 export default function Section() {
   return (
     <div className='section'>
-      <h1>Section</h1>
+      <Actuality></Actuality>
     </div>
   )
 }
