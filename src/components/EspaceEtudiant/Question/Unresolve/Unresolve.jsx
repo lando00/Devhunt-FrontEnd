@@ -19,7 +19,7 @@ export default function Unresolve() {
           <div className="tittle"> {tittle} {isResolved ? <div className="resolved" /> : <div className="unresolved" />}</div>
           <div className="post"> {post}</div>
           <div className="replay">
-            <NavLink to={`./question/${index}`}>
+            <NavLink to={`/questions/question/${index}`}>
               <div className="answer">Reponse : {nbrResponse}</div>
             </NavLink>
             <div className="replay-post">

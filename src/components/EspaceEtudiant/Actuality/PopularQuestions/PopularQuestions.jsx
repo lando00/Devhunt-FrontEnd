@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import avatar from '../../../assets/avatars/face-3.jpg'
+import avatar from '../../../../assets/avatars/face-3.jpg'
 import { NavLink } from 'react-router-dom'
-import "./Populary.scss"
+// import "./Populary.scss"
 
 export default function PopularQuestions() {
 

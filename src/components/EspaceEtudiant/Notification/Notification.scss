@@ -1,34 +1,71 @@
-.Notification{
-  background-color: #fff;
-  border-radius: 15px;
-  flex: 1;
-  height: 85vh;
+@import '../../../assets/Color.scss';
+
+.notification {
   display: flex;
   flex-direction: column;
-  padding: 20px 20px;
-  gap: 10px;
-  overflow-y: auto;
-  .notif{
-    display: flex;
-    background-color: #eeeef3;
-    border-radius: 10px;
-    gap: 3%;
-    align-items: center;
-    padding: 10px 5px;
 
-    .image{
-      background-image: url(../../../assets/avatars/face-1.jpg);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-size: contain;
-    }
-    .messg{
-      .name{
-        font-weight: 600;
+  .head-notification {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    border-bottom: 1px solid $white-background;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: .9rem;
+    padding-left: 1em;
+
+    .item-nav-notification {
+      padding: 20px 15px;
+      cursor: pointer;
+      transition: color .3s;
+      text-decoration: none;
+      color: #7c7f85;
+
+      &:hover {
+        border-bottom: 3px solid $black ;
+        color: $black ;
       }
-      .action{
-        font-size: 15px;
+    }
+
+    .active {
+      border-bottom: 3px solid $black ;
+      color: $black ;
+    }
+  }
+
+  .notification-containe {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    background-color: #fff;
+    border-radius: 15px;
+    flex: 1;
+    padding: 20px 20px;
+
+    .notif {
+      display: flex;
+      background-color: #eeeef3;
+      border-radius: 10px;
+      gap: 5px;
+      align-items: center;
+      padding: 10px 5px;
+
+      .image {
+        background-image: url(../../../assets/avatars/face-1.jpg);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-size: contain;
+      }
+
+      .messg {
+        .name {
+          font-weight: 600;
+        }
+
+        .action {
+          font-size: 15px;
+        }
       }
     }
   }

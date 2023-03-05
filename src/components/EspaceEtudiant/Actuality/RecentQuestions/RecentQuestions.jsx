@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import avatar from '../../../assets/avatars/face-4.jpg'
+import avatar from '../../../../assets/avatars/face-4.jpg'
 import { NavLink } from 'react-router-dom'
-import "./RecentQuestions.scss"
+// import "./RecentQuestions.scss"
 
 export default function RecentQuestions() {
 
