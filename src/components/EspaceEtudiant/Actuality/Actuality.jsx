@@ -23,7 +23,7 @@ export default function Actuality() {
           <div className="date"> {date} </div>
         </div>
         <div className="detail">
-          <div className="tittle"> {tittle} {isResolved ? <div className="resolved">Résolue</div> : <div className="not-resolved">Non Resolue</div>}</div>
+          <div className="tittle"> {tittle} {isResolved ? <div className="resolved">Résolue</div> : <div className="unresolved">Non Resolue</div>}</div>
           <div className="post"> {post}</div>
           <div className="replay">
             <div className="answer">Reponse : {nbrResponse}</div>

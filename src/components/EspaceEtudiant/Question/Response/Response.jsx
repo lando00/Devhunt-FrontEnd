@@ -56,7 +56,7 @@ export default function Response() {
                 <div className="date"> {date} </div>
               </div>
               <div className="detail">
-                <div className="tittle">{isResolved && <div className="resolved">La Résolution</div>}</div>
+                <div className="tittle">{isResolved && <div className="icon-done"/>}</div>
                 <div className="post"> {post}</div>
               </div>
               <div className="replay-post-single">
