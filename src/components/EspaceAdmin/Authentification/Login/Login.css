@@ -41,7 +41,9 @@
   color: #5d646d;
   transition: border-color 0.15s ease-in-out;
 }
-
+input[type='checkbox']{
+  width: inherit;
+}
 .login input[type="text"]:focus,
 .login input[type="password"]:focus {
   border-color: #007bff;
