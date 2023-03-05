@@ -5,8 +5,8 @@ import SidebarLeft from '../SidebarLeft/SidebarLeft'
 import SidebarRight from '../SidebarRight/SidebarRight'
 import Section from '../Section/Section'
 
-
 export default function Container() {
+
   return (
     <div className='container'>
       <Header />

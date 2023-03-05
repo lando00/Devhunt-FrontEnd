@@ -6,15 +6,24 @@ import Notification from './components/EspaceEtudiant/Notification/Notification'
 import Question from './components/EspaceEtudiant/Question/Question'
 import Answer from './components/EspaceEtudiant/Answer/Answer'
 import Profil from './components/EspaceEtudiant/Profil/Profil'
-import Header from './components/EspaceEtudiant/Header/Header'
+import PopularQuestions from './components/EspaceEtudiant/PopularQuestions/PopularQuestions'
+import MostViewQuestions from './components/EspaceEtudiant/MostViewQuestions/MostViewQuestions'
+import RecentQuestions from './components/EspaceEtudiant/RecentQuestions/RecentQuestions'
+import Authentification from './components/EspaceAdmin/Authentification/Authentification'
 
 //test
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/login" element={<Authentification />} />
         <Route path="/" element={<Container />} >
-          <Route path="/actuality" element={<Actuality />} />
+          <Route path="/actuality" element={<Actuality />} >
+            <Route path="/actuality/recentQuestions" element={<RecentQuestions />}/>
+            <Route path="/actuality/popularQuestions" element={<PopularQuestions />} />
+            <Route path="/actuality/MostViewQuestions" element={<MostViewQuestions />} />
+          </Route>
+          
           <Route path="/notifications" element={<Notification />} />
           <Route path="/questions" element={<Question />} />
           <Route path="/answers" element={<Answer />} />

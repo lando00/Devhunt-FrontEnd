@@ -17,6 +17,14 @@
   margin-bottom: 1.2rem;
 }
 
+.login label {
+  margin-bottom: 10px;
+}
+
+.remember label{
+  margin-bottom: 0px;
+}
+
 .login p {
   margin-bottom: 10px;
 }

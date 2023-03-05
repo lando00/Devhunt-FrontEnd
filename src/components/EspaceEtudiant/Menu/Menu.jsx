@@ -7,7 +7,7 @@ export default function Menu() {
     <div className='menu'>
       <ul>
         <li>
-            <Link to="/actuality">
+            <Link to="/actuality/recentQuestions">
                 <i className='fa fa-home icon'></i>
                 <span>Actualités</span>
             </Link>

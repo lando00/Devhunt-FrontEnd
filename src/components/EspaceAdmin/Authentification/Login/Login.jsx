@@ -7,20 +7,19 @@ export default function Login() {
     <div className='loginContainer'>
       <div className="login">
         <h1>Welcome ! 👋</h1>
-        <p className='label'>Email or Username</p>
-        <input type="text" placeholder='example@gmail.com' />
-        <p className='label'>Password</p>
-        <input type="password" placeholder='**********' />
+        <label className='label' htmlFor='email'>Email</label>
+        <input type="text" placeholder='example@gmail.com' id='email' />
+        <label className='label' htmlFor='motDePasse'>Mot de passe</label>
+        <input type="password" placeholder='**********' id='motDePasse' />
         <p className='remember'>
-          <input type="checkbox" />
-          <label htmlFor="">Remember Me</label>
-          <span>Forgot Your Password?</span>
+          <input type="checkbox" id='remember' />
+          <label htmlFor="remember">Se souvient de moi</label>
+          <span>Mot de passe oublié?</span>
         </p>
 
         <Link to="/app/dashboard">
             Login
         </Link>
-        <p className='createAccount'>Not registered? Create an account</p>
 
       </div>
     </div>

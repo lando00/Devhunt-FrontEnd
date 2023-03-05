@@ -4,7 +4,7 @@ import './HeaderAuth.css'
 export default function HeaderAuth() {
   return (
     <div className='headerAuth'>
-      <h3>Logo</h3>
+      <span className="name">ENIFanampy</span>
       <span className='log-in'>Login</span>
       <span>Register</span>
     </div>

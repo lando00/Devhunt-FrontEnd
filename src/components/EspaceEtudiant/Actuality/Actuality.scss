@@ -54,7 +54,7 @@
     .actuality-item {
       display: flex;
       gap: 1.4em;
-      padding: 25px 20px;
+      padding: 30px 20px;
       border-radius: .2em;
       border-bottom: 1px solid $white-background;
 
@@ -77,7 +77,7 @@
 
           .name {
             text-transform: capitalize;
-            color: rgb(71, 71, 233);
+            color: #2d6ff7 !important;
             font-weight: bold;
             font-size: .95em;
           }
