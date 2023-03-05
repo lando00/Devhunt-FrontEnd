@@ -18,13 +18,13 @@ export default function Notification() {
   return (
     <div className='Notification'>
       {
-        notifications.map((notif) => {
+        notifications.map(({name , action }, index) => {
           return (
-            <div className="notif">
+            <div key={index} className="notif">
               <div className="image"></div>
               <div className="messg">
-                <div className="name">{notif.name}</div>
-                <div className="action">{notif.action}</div>
+                <div className="name">{name}</div>
+                <div className="action">{action}</div>
               </div>
             </div>
           )

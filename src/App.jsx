@@ -10,6 +10,7 @@ import PopularQuestions from './components/EspaceEtudiant/PopularQuestions/Popul
 import MostViewQuestions from './components/EspaceEtudiant/MostViewQuestions/MostViewQuestions'
 import RecentQuestions from './components/EspaceEtudiant/RecentQuestions/RecentQuestions'
 import Authentification from './components/EspaceAdmin/Authentification/Authentification'
+import Response from './components/EspaceEtudiant/Question/Response/Response'
 
 //test
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/questions" element={<Question />} />
           <Route path="/answers" element={<Answer />} />
           <Route path="/profil" element={<Profil />} />
+          <Route path="questions/question/:idPost" element={<Response />} />
         </Route>
       </Routes>
     </BrowserRouter>
