@@ -28,7 +28,6 @@
       }
 
       &:hover {
-        border-bottom: 3px solid $black;
 
         a {
           color: $black;
@@ -36,14 +35,10 @@
       }
     }
 
-    .item-active {
-      border-bottom: 3px solid $black;
-
-      a {
-        color: $black !important;
-      }
-
+    .active{
+      color: $black !important;
     }
+
   }
 
   .containe-actuality {
@@ -108,16 +103,12 @@
               color: #fff;
             }
 
-            .unresolved {
+            .not-resolved {
               color: #fff;
               font-size: .6em;
               background-color: rgb(184, 28, 28);
               padding: 4px 8px;
               border-radius: .5em;
-              // background-image: url('../../../assets/icon/unresolved.svg');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: contain;
             }
           }
 

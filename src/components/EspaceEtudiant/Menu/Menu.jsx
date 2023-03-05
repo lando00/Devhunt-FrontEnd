@@ -7,10 +7,10 @@ export default function Menu() {
     <div className='menu'>
       <ul>
         <li>
-            <Link to="/actuality">
+            <NavLink to="/actuality/recentQuestions">
                 <i className='fa fa-home icon'></i>
                 <span>Actualités</span>
-            </Link>
+            </NavLink>
         </li>
         <li>
           <NavLink to="/notifications">
