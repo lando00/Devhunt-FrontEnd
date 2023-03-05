@@ -11,15 +11,16 @@
     border-bottom: 1px solid $white-background;
     font-weight: bold;
     text-transform: capitalize;
-    font-size: .9rem ;
+    font-size: .9rem;
     padding-left: 1em;
+
     .item-nav-question {
       padding: 20px 15px;
       cursor: pointer;
       transition: color .3s;
       text-decoration: none;
-      color: #7c7f85 ;
-      border-bottom:inherit ;
+      color: #7c7f85;
+
       &:hover {
         border-bottom: 3px solid $black ;
         color: $black ;
@@ -139,6 +140,7 @@
               padding: .5em 1em;
               background-color: #999;
               border-radius: .5em;
+
               &:hover {
                 background-color: #666;
                 color: #eee;
@@ -154,6 +156,7 @@
               display: flex;
               align-items: center;
               gap: .5em;
+
               .icon-replay {
                 height: 1.5em;
                 width: 1.5em;
@@ -162,6 +165,7 @@
                 background-size: contain;
                 background-repeat: no-repeat;
               }
+
               &:hover {
                 background-color: #222;
                 color: #eee;
