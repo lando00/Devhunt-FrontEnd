@@ -26,8 +26,8 @@ export default function Menu() {
         </li>
         <li>
           <NavLink to="/answers">
-            <i className='fas fa-question icon'></i>
-            <span>Réponses</span>
+            <i className="fas fa-video icon"></i>
+            <span>En direct</span>
           </NavLink>
         </li>
         <li>
