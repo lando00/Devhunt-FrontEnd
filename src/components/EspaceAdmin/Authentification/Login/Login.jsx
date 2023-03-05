@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
-
+fd
 export default function Login() {
   return (
     <div className='loginContainer'>
@@ -17,7 +17,7 @@ export default function Login() {
           <span>Mot de passe oublié?</span>
         </p>
 
-        <Link to="/app/dashboard">
+        <Link to="/actuality/recentQuestions">
             Login
         </Link>
 
