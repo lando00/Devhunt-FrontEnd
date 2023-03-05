@@ -11,37 +11,24 @@
     border-bottom: 1px solid $white-background;
     font-weight: bold;
     text-transform: capitalize;
-    font-size: .9rem;
-
-    .item {
-      padding: 20px 0px;
-      margin-left: 15px;
+    font-size: .9rem ;
+    padding-left: 1em;
+    .item-nav-question {
+      padding: 20px 15px;
       cursor: pointer;
       transition: color .3s;
-
-      a {
-        // padding: 15px 10px;
-        // color: $black;
-        color: #7c7f85;
-        text-decoration: none;
-      }
-
+      text-decoration: none;
+      color: #7c7f85 ;
+      border-bottom:inherit ;
       &:hover {
-        border-bottom: 3px solid $black;
-
-        a {
-          color: $black;
-        }
+        border-bottom: 3px solid $black ;
+        color: $black ;
       }
     }
 
-    .item-active {
-      border-bottom: 3px solid $black;
-
-      a {
-        color: $black !important;
-      }
-
+    .active {
+      border-bottom: 3px solid $black ;
+      color: $black ;
     }
   }
 

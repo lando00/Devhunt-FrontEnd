@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./Question.scss"
 import avatar from '../../../assets/avatars/face-4.jpg'
-import { NavLink } from 'react-router-dom'
+import { NavLink , Outlet } from 'react-router-dom'
 export default function Question() {
   const [user, setUser] = useState(
     [
@@ -24,7 +24,7 @@ export default function Question() {
           <div className="date"> {date} </div>
         </div>
         <div className="detail">
-          <div className="tittle"> {tittle} {isResolved ? <div className="resolved"/> : <div className="unresolved" />}</div>
+          <div className="tittle"> {tittle} {isResolved ? <div className="resolved" /> : <div className="unresolved" />}</div>
           <div className="post"> {post}</div>
           <div className="replay">
             <NavLink to={`./question/${index}`}>
@@ -41,13 +41,21 @@ export default function Question() {
   return (
     <div className='question-nav'>
       <div className="head-actuality">
-        <div className="item "><a href="#">Nouvelle Question</a> </div>
-        <div className="item item-active"><a href="#">Mes Question</a> </div>
-        <div className="item"><a href="#">Question Resolue</a></div>
-        <div className="item"><a href="#">Question non Resolue</a></div>
+        <NavLink to='./newQuestion' className='item-nav-question'>
+          Nouvelle Question
+        </NavLink>
+        <NavLink to='./myQuestion'className='item-nav-question'>
+          Mes Question
+        </NavLink>
+        <NavLink to="./questionResolve" className="item-nav-question">
+          Question Resolue
+        </NavLink>
+        <NavLink to="./questionUnresolve" className="item-nav-question">
+          Question non Resolue
+        </NavLink>
       </div>
       <div className="containe-actuality">
-        {post}
+      <Outlet />
       </div>
     </div>
   )
