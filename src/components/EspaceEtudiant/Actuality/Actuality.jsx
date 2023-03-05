@@ -10,9 +10,15 @@ export default function Actuality() {
   return (
     <div className='actuality'>
       <div className="head-actuality">
-        <NavLink onClick={change} className='item-nav-actuality' to="./recentQuestions">Question Recente</NavLink>
-        <NavLink className='item-nav-actuality' to="./popularQuestions">Populaires</NavLink>
-        <NavLink className='item-nav-actuality' to="./MostViewQuestions">Plus visitées</NavLink>
+        <div className="item">
+          <NavLink to="/actuality/recentQuestions">Question Recente</NavLink>
+        </div>
+        <div className="item">
+          <NavLink to="/actuality/popularQuestions">Populaires</NavLink>
+        </div>
+        <div className="item">
+          <NavLink to="/actuality/MostViewQuestions">Plus visitées</NavLink>
+        </div>
       </div>
       <div className="containe-actuality">
         <Outlet />
