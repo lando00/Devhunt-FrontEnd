@@ -39,13 +39,13 @@ export default function Actuality() {
     <div className='actuality'>
       <div className="head-actuality">
         <div className="item">
-          <NavLink to="/actuality/recentQuestions">Question Recente</NavLink>
+          <NavLink to="./recentQuestions">Question Recente</NavLink>
         </div>
         <div className="item">
-          <NavLink to="/actuality/popularQuestions">Populaires</NavLink> 
+          <NavLink to="./popularQuestions">Populaires</NavLink> 
         </div>
         <div className="item">
-          <NavLink to="/actuality/MostViewQuestions">Plus visitées</NavLink>
+          <NavLink to="./MostViewQuestions">Plus visitées</NavLink>
         </div>
       </div>
       <div className="containe-actuality">
