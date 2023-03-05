@@ -16,18 +16,16 @@ export default function Actuality() {
   )
   const Actu = user.map(({ nbrResponse, isResolved, name, tittle, post, lasteName, date }, index) => (
     <div key={index} className="actuality-item">
-      {/* <div className="pdp"></div> */}
       <img src={avatar} alt="" className='pdp' />
       <div className="detail-post">
-          <div className="head-post">
-            <div className="name">{lasteName} {name}</div>
-            <div className="date"> {date} </div>
-          </div>
+        <div className="head-post">
+          <div className="name">{lasteName} {name}</div>
+          <div className="date"> {date} </div>
+        </div>
         <div className="detail">
           <div className="tittle"> {tittle} {isResolved ? <div className="resolved">Résolue</div> : <div className="not-resolved">Non Resolue</div>}</div>
           <div className="post"> {post}</div>
           <div className="replay">
-            {/* <div className="comment"></div> */}
             <div className="answer">Reponse : {nbrResponse}</div>
             <div className="replay-post">Repondre</div>
           </div>

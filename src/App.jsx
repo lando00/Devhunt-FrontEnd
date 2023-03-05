@@ -7,6 +7,7 @@ import Question from './components/EspaceEtudiant/Question/Question'
 import Answer from './components/EspaceEtudiant/Answer/Answer'
 import Profil from './components/EspaceEtudiant/Profil/Profil'
 import Header from './components/EspaceEtudiant/Header/Header'
+import Response from './components/EspaceEtudiant/Question/Response/Response'
 
 //test
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/questions" element={<Question />} />
           <Route path="/answers" element={<Answer />} />
           <Route path="/profil" element={<Profil />} />
+          <Route path="questions/question/:idPost" element={<Response />} />
         </Route>
       </Routes>
     </BrowserRouter>

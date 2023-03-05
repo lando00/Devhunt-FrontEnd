@@ -1,15 +1,17 @@
 @import '../../../assets/Color.scss';
+
 .sidebar-right {
   width: 25%;
   background-color: inherit;
-  padding-top: 1em ;
+  padding-top: 1em;
   padding-left: 15px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: .5em;
   overflow: auto;
-  .containe{
+
+  .containe {
     background-color: #fff;
     border-radius: 20px;
     width: 250px;
@@ -17,26 +19,31 @@
     top: 71px;
     padding: .2em .8em;
     gap: .5em;
+
     .question {
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 1em 0;
-      .item{
+
+      .item {
         display: flex;
         flex-direction: column;
         gap: .5em;
         border: .1em solid #ddd;
         padding: .5em 1em;
-        .txt-question{
+
+        .txt-question {
           font-size: .9em;
           color: $blue;
         }
-        .txt-answer{
+
+        .txt-answer {
           font-size: .9em;
           color: #f05555;
         }
-        span{
+
+        span {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -46,10 +53,12 @@
         }
       }
     }
-    .tag{
+
+    .tag {
       display: flex;
       flex-direction: column;
-      .head-tag{
+
+      .head-tag {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -59,22 +68,26 @@
         padding: .4em .8em;
         color: #fff;
       }
-      .tag-containe{
+
+      .tag-containe {
         display: flex;
         flex-wrap: wrap;
         gap: .3em;
         padding: .5em 1em;
-        border-radius:  0 0 .5em .5em;
-        .item-tag{
+        border-radius: 0 0 .5em .5em;
+
+        .item-tag {
           font-size: .75em;
           padding: .4em .8em;
           border-radius: .5em;
           transition: background-color .5s;
-          &:hover{
+
+          &:hover {
             background-color: $black;
             color: $white-background;
           }
-          &:active{
+
+          &:active {
             scale: .9;
           }
         }
