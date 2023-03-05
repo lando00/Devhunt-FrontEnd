@@ -11,6 +11,10 @@ import MostViewQuestions from './components/EspaceEtudiant/MostViewQuestions/Mos
 import RecentQuestions from './components/EspaceEtudiant/RecentQuestions/RecentQuestions'
 import Authentification from './components/EspaceAdmin/Authentification/Authentification'
 import Response from './components/EspaceEtudiant/Question/Response/Response'
+import Unresolve from './components/EspaceEtudiant/Question/Unresolve/Unresolve'
+import Resolve from './components/EspaceEtudiant/Question/Resolve/Resolve'
+import NewQuestion from './components/EspaceEtudiant/Question/NewQuestion/NewQuestion'
+import MyQuestion from './components/EspaceEtudiant/Question/MyQuestion/MyQuestion'
 
 //test
 function App() {
@@ -26,7 +30,12 @@ function App() {
           </Route>
           
           <Route path="/notifications" element={<Notification />} />
-          <Route path="/questions" element={<Question />} />
+          <Route path="/questions" element={<Question />}>
+            <Route path="/questions/newQuestion" element={<NewQuestion/>}></Route>
+            <Route path="/questions/myQuestion" element={<MyQuestion/>}></Route>
+            <Route path="/questions/questionResolve" element={<Resolve/>}></Route>
+            <Route path="/questions/questionUnresolve" element={<Unresolve/>}></Route>
+          </Route>
           <Route path="/answers" element={<Answer />} />
           <Route path="/profil" element={<Profil />} />
           <Route path="questions/question/:idPost" element={<Response />} />

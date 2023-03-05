@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./Question.scss"
 import avatar from '../../../assets/avatars/face-4.jpg'
-import { NavLink } from 'react-router-dom'
+import { NavLink , Outlet } from 'react-router-dom'
 export default function Question() {
   const [user, setUser] = useState(
     [
@@ -41,21 +41,21 @@ export default function Question() {
   return (
     <div className='question-nav'>
       <div className="head-actuality">
-        <NavLink className='item-nav-question'>
+        <NavLink to='./newQuestion' className='item-nav-question'>
           Nouvelle Question
         </NavLink>
-        <NavLink className='item-nav-question'>
+        <NavLink to='./myQuestion'className='item-nav-question'>
           Mes Question
         </NavLink>
-        <NavLink className="item-nav-question">
+        <NavLink to="./questionResolve" className="item-nav-question">
           Question Resolue
         </NavLink>
-        <NavLink className="item-nav-question">
+        <NavLink to="./questionUnresolve" className="item-nav-question">
           Question non Resolue
         </NavLink>
       </div>
       <div className="containe-actuality">
-        {post}
+      <Outlet />
       </div>
     </div>
   )

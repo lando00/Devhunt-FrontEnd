@@ -11,24 +11,24 @@
     border-bottom: 1px solid $white-background;
     font-weight: bold;
     text-transform: capitalize;
-    font-size: .9rem;
+    font-size: .9rem ;
+    padding-left: 1em;
     .item-nav-question {
-      padding: 20px 0px;
-      margin-left: 15px;
+      padding: 20px 15px;
       cursor: pointer;
       transition: color .3s;
       text-decoration: none;
-      color: #7c7f85 !important;
-      border-bottom:inherit !important;
+      color: #7c7f85 ;
+      border-bottom:inherit ;
       &:hover {
-        border-bottom: 3px solid $black !important;
-        color: $black !important;
+        border-bottom: 3px solid $black ;
+        color: $black ;
       }
     }
 
     .active {
       border-bottom: 3px solid $black ;
-      color: $black !important;
+      color: $black ;
     }
   }
 
