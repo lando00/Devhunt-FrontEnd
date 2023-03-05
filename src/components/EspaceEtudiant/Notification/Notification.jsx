@@ -1,35 +1,17 @@
 import React, { useState } from 'react'
 import './Notification.scss'
+import { NavLink , Outlet } from 'react-router-dom'
 
 export default function Notification() {
 
-  const [notifications, setNotif] = useState([
-    {name: 'Jean Polo', action: 'a aimé votre publication'},
-    {name: 'Rigo', action: 'a repondu votre question'},
-    {name: 'Marthin', action: 'est actuellement en direct'},
-    {name: 'MIcKAEL', action: 'is pangalabadinolo '},
-    {name: 'Angelo', action: 'a publié un question'},
-    {name: 'eren Ymir', action: 'a besoin d\'aide sur react'},
-    {name: 'eren Ymir', action: 'a besoin d\'aide sur react'},
-    {name: 'eren Ymir', action: 'a besoin d\'aide sur react'},
-    {name: 'Marc', action: 'a aimé votre publication'}
-  ])
-
   return (
-    <div className='Notification'>
-      {
-        notifications.map(({name , action }, index) => {
-          return (
-            <div key={index} className="notif">
-              <div className="image"></div>
-              <div className="messg">
-                <div className="name">{name}</div>
-                <div className="action">{action}</div>
-              </div>
-            </div>
-          )
-        })
-      }
+    <div className='notification'>
+      <div className="head-notification">
+        <NavLink className='item-nav-notification' to="./all">Tous</NavLink>
+        <NavLink className='item-nav-notification' to="./questions">Question</NavLink>
+        <NavLink className='item-nav-notification' to="./video">Video</NavLink>
+      </div>
+        <Outlet />
     </div>
   )
 }

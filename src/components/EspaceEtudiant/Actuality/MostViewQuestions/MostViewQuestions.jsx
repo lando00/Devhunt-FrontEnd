@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
-import avatar from '../../../assets/avatars/face-3.jpg'
+import React, { useState } from 'react'
+import avatar from '../../../../assets/avatars/face-3.jpg'
 import { NavLink } from 'react-router-dom'
-import "./Populary.scss"
+// import "./Populary.scss"
 
-export default function PopularQuestions() {
+export default function MostViewQuestions() {
 
   const [user, setUser] = useState(
     [
@@ -17,18 +17,17 @@ export default function PopularQuestions() {
       { nbrResponse: 4, tittle: 'Tittre du post', isResolved: true, name: 'mika', lasteName: 'tieko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
     ]
   )
-  const populary = user.filter(({ nbrResponse }, index) => nbrResponse > 15 );
-  console.log(populary) 
+  const populary = user.filter(({ nbrResponse }) => nbrResponse > 5);
   const Actu = populary.map(({ nbrResponse, isResolved, name, tittle, post, lasteName, date }, index) => (
     <div key={index} className="actuality-item">
       <img src={avatar} alt="" className='pdp' />
       <div className="detail-post">
-          <div className="head-post">
-            <div className="name">{lasteName} {name}</div>
-            <div className="date"> {date} </div>
-          </div>
+        <div className="head-post">
+          <div className="name">{lasteName} {name}</div>
+          <div className="date"> {date} </div>
+        </div>
         <div className="detail">
-        <div className="tittle"> {tittle} {isResolved ? <div className="resolved"/> : <div className="unresolved" />}</div>
+          <div className="tittle"> {tittle} {isResolved ? <div className="resolved" /> : <div className="unresolved" />}</div>
           <div className="post"> {post}</div>
           <div className="replay">
             <NavLink to={`/questions/question/${index}`}>

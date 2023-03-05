@@ -6,11 +6,18 @@ import Notification from './components/EspaceEtudiant/Notification/Notification'
 import Question from './components/EspaceEtudiant/Question/Question'
 import Answer from './components/EspaceEtudiant/Answer/Answer'
 import Profil from './components/EspaceEtudiant/Profil/Profil'
-import PopularQuestions from './components/EspaceEtudiant/PopularQuestions/PopularQuestions'
-import MostViewQuestions from './components/EspaceEtudiant/MostViewQuestions/MostViewQuestions'
-import RecentQuestions from './components/EspaceEtudiant/RecentQuestions/RecentQuestions'
+import PopularQuestions from './components/EspaceEtudiant/Actuality/PopularQuestions/PopularQuestions'
+import MostViewQuestions from './components/EspaceEtudiant/Actuality/MostViewQuestions/MostViewQuestions'
+import RecentQuestions from './components/EspaceEtudiant/Actuality/RecentQuestions/RecentQuestions'
 import Authentification from './components/EspaceAdmin/Authentification/Authentification'
 import Response from './components/EspaceEtudiant/Question/Response/Response'
+import Unresolve from './components/EspaceEtudiant/Question/Unresolve/Unresolve'
+import Resolve from './components/EspaceEtudiant/Question/Resolve/Resolve'
+import NewQuestion from './components/EspaceEtudiant/Question/NewQuestion/NewQuestion'
+import MyQuestion from './components/EspaceEtudiant/Question/MyQuestion/MyQuestion'
+import Video from './components/EspaceEtudiant/Notification/Video/Video'
+import QuestionNotif from './components/EspaceEtudiant/Notification/Question/QuestionNotif'
+import All from './components/EspaceEtudiant/Notification/All/All'
 
 //test
 function App() {
@@ -24,9 +31,17 @@ function App() {
             <Route path="/actuality/popularQuestions" element={<PopularQuestions />} />
             <Route path="/actuality/MostViewQuestions" element={<MostViewQuestions />} />
           </Route>
-          
-          <Route path="/notifications" element={<Notification />} />
-          <Route path="/questions" element={<Question />} />
+          <Route path="/notifications" element={<Notification />}>
+            <Route path='/notifications/all' element={<All/>}></Route>
+            <Route path='/notifications/questions' element={<QuestionNotif/>}></Route>
+            <Route path='/notifications/video' element={<Video/>}></Route>
+          </Route>
+          <Route path="/questions" element={<Question />}>
+            <Route path="/questions/newQuestion" element={<NewQuestion/>}></Route>
+            <Route path="/questions/myQuestion" element={<MyQuestion/>}></Route>
+            <Route path="/questions/questionResolve" element={<Resolve/>}></Route>
+            <Route path="/questions/questionUnresolve" element={<Unresolve/>}></Route>
+          </Route>
           <Route path="/answers" element={<Answer />} />
           <Route path="/profil" element={<Profil />} />
           <Route path="questions/question/:idPost" element={<Response />} />
