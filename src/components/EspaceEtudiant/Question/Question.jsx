@@ -24,7 +24,7 @@ export default function Question() {
           <div className="date"> {date} </div>
         </div>
         <div className="detail">
-          <div className="tittle"> {tittle} {isResolved ? <div className="resolved"/> : <div className="unresolved" />}</div>
+          <div className="tittle"> {tittle} {isResolved ? <div className="resolved" /> : <div className="unresolved" />}</div>
           <div className="post"> {post}</div>
           <div className="replay">
             <NavLink to={`./question/${index}`}>
@@ -41,10 +41,18 @@ export default function Question() {
   return (
     <div className='question-nav'>
       <div className="head-actuality">
-        <div className="item "><a href="#">Nouvelle Question</a> </div>
-        <div className="item item-active"><a href="#">Mes Question</a> </div>
-        <div className="item"><a href="#">Question Resolue</a></div>
-        <div className="item"><a href="#">Question non Resolue</a></div>
+        <NavLink className='item-nav-question'>
+          Nouvelle Question
+        </NavLink>
+        <NavLink className='item-nav-question'>
+          Mes Question
+        </NavLink>
+        <NavLink className="item-nav-question">
+          Question Resolue
+        </NavLink>
+        <NavLink className="item-nav-question">
+          Question non Resolue
+        </NavLink>
       </div>
       <div className="containe-actuality">
         {post}
