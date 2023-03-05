@@ -18,7 +18,6 @@ export default function PopularQuestions() {
     ]
   )
   const populary = user.filter(({ nbrResponse }, index) => nbrResponse > 15 );
-  console.log(populary) 
   const Actu = populary.map(({ nbrResponse, isResolved, name, tittle, post, lasteName, date }, index) => (
     <div key={index} className="actuality-item">
       <img src={avatar} alt="" className='pdp' />
