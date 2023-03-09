@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import avatar from '../../../assets/avatars/face-4.jpg'
 import "./Question.scss"
 import { NavLink , Outlet } from 'react-router-dom'
 export default function Question() {
