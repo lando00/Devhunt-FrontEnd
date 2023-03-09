@@ -31,7 +31,6 @@ export default function Replay() {
   const post = posts.find(({ id }) => id === idPost);
   function onAddReplay(e) {
     e.preventDefault()
-    console.log('ok')
   }
 
   return (
@@ -44,7 +43,7 @@ export default function Replay() {
             <div className="date"> {post.date} </div>
           </div>
           <div className="detail">
-            <div className="tittle"> {post.tittle} {post.isResolved ? <div className="resolved">Résolue</div> : <div className="not-resolved">Non Resolue</div>}</div>
+            <div className="tittle"> <h2>{post.tittle}</h2> {post.isResolved ? <div className="resolved">(Résolue)</div> : <div className="unresolved">(Non Resolue)</div>}</div>
             <div className="post"> {post.post}</div>
           </div>
         </div>

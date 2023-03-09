@@ -16,7 +16,7 @@ export default function Unresolve() {
           <div className="date"> {date} </div>
         </div>
         <div className="detail">
-          <div className="tittle"> {tittle} {isResolved ? <div className="resolved" /> : <div className="unresolved" />}</div>
+          <div className="tittle"> {tittle} {isResolved ? <div className="resolved" >(Resolue)</div> : <div className="unresolved" >(Non Resolue)</div>}</div>
           <div className="post"> {post}</div>
           <div className="replay">
             <NavLink to={`/questions/question/${index}`}>

@@ -89,25 +89,18 @@
             color: $black;
 
             .resolved {
+              font-size: .7em;
               padding: 4px 8px;
               border-radius: .5em;
-              width: 2em;
-              height: 2em;
-              background-image: url('../../../assets/icon/done.svg');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
+              color: #fff;
+              color: $green;
             }
 
             .unresolved {
+              color: #fff;
+              font-size: .7em;
               padding: 4px 8px;
-              border-radius: .5em;
-              width: 1.5em;
-              height: 1.5em;
-              background-image: url('../../../assets/icon/unresolved.svg');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: cover;
+              color: $red;
             }
           }
 

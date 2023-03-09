@@ -40,7 +40,7 @@ export default function Response() {
             <div className="date"> {post.date} </div>
           </div>
           <div className="detail">
-            <div className="tittle"> {post.tittle} {post.isResolved ? <div className="resolved">Résolue</div> : <div className="not-resolved">Non Resolue</div>}</div>
+            <div className="tittle"> {post.tittle} {post.isResolved ? <div className="resolved">Résolue</div> : <div className="unresolved">(Non Resolue)</div>}</div>
             <div className="post"> {post.post}</div>
           </div>
         </div>
