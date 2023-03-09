@@ -1,5 +1,11 @@
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src: url(../src/assets/font/Roboto-Regular.ttf);
+}
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: 'Roboto', sans-serif;
   --couleur-font : #bbbbc6;
   --couleur-titre : #343a40;
 }
@@ -19,3 +25,4 @@ body{
   height: 100vh;
   overflow-x: hidden;
 }
+
