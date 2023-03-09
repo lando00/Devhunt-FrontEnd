@@ -33,9 +33,12 @@ export default function MostViewQuestions() {
             <NavLink to={`/questions/question/${index}`}>
               <div className="answer">Reponse : {nbrResponse}</div>
             </NavLink>
+              <NavLink to={`/actuality/replay/${index}`}>
             <div className="replay-post">
-              <div className="icon-replay" />Repondre
+              <div className="icon-replay" />
+                Repondre
             </div>
+              </NavLink>
           </div>
         </div>
       </div>

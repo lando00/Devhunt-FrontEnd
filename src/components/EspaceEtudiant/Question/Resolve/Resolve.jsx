@@ -26,9 +26,9 @@ export default function Resolve() {
             <NavLink to={`/questions/question/${index}`}>
               <div className="answer">Reponse : {nbrResponse}</div>
             </NavLink>
-            <div className="replay-post">
+            {/* <div className="replay-post">
               <div className="icon-replay" />Repondre
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

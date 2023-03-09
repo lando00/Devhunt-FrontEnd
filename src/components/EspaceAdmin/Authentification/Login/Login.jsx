@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
-fd
 export default function Login() {
   return (
     <div className='loginContainer'>

@@ -18,6 +18,8 @@ import MyQuestion from './components/EspaceEtudiant/Question/MyQuestion/MyQuesti
 import Video from './components/EspaceEtudiant/Notification/Video/Video'
 import QuestionNotif from './components/EspaceEtudiant/Notification/Question/QuestionNotif'
 import All from './components/EspaceEtudiant/Notification/All/All'
+import Replay from './components/EspaceEtudiant/Question/Replay/Replay'
+import './App.scss'
 
 //test1
 function App() {
@@ -27,24 +29,25 @@ function App() {
         <Route path="/login" element={<Authentification />} />
         <Route path="/" element={<Container />} >
           <Route path="/actuality" element={<Actuality />} >
-            <Route path="/actuality/recentQuestions" element={<RecentQuestions />}/>
+            <Route path="/actuality/recentQuestions" element={<RecentQuestions />} />
             <Route path="/actuality/popularQuestions" element={<PopularQuestions />} />
             <Route path="/actuality/MostViewQuestions" element={<MostViewQuestions />} />
+            <Route path="/actuality/replay/:idPost" element={<Replay />}></Route>
           </Route>
           <Route path="/notifications" element={<Notification />}>
-            <Route path='/notifications/all' element={<All/>}></Route>
-            <Route path='/notifications/questions' element={<QuestionNotif/>}></Route>
-            <Route path='/notifications/video' element={<Video/>}></Route>
+            <Route path='/notifications/all' element={<All />}></Route>
+            <Route path='/notifications/questions' element={<QuestionNotif />}></Route>
+            <Route path='/notifications/video' element={<Video />}></Route>
           </Route>
           <Route path="/questions" element={<Question />}>
-            <Route path="/questions/newQuestion" element={<NewQuestion/>}></Route>
-            <Route path="/questions/myQuestion" element={<MyQuestion/>}></Route>
-            <Route path="/questions/questionResolve" element={<Resolve/>}></Route>
-            <Route path="/questions/questionUnresolve" element={<Unresolve/>}></Route>
+            <Route path="/questions/newQuestion" element={<NewQuestion />}></Route>
+            <Route path="/questions/myQuestion" element={<MyQuestion />}></Route>
+            <Route path="/questions/questionResolve" element={<Resolve />}></Route>
+            <Route path="/questions/questionUnresolve" element={<Unresolve />}></Route>
+            <Route path="/questions/question/:idPost" element={<Response />} />
           </Route>
           <Route path="/answers" element={<Answer />} />
           <Route path="/profil" element={<Profil />} />
-          <Route path="questions/question/:idPost" element={<Response />} />
         </Route>
       </Routes>
     </BrowserRouter>
