@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import avatar from '../../../../assets/avatars/face-4.jpg'
 import { NavLink } from 'react-router-dom'
 // import "./RecentQuestions.scss"
@@ -21,20 +21,23 @@ export default function RecentQuestions() {
     <div key={index} className="actuality-item">
       <img src={avatar} alt="" className='pdp' />
       <div className="detail-post">
-          <div className="head-post">
-            <div className="name">{lasteName} {name}</div>
-            <div className="date"> {date} </div>
-          </div>
+        <div className="head-post">
+          <div className="name">{lasteName} {name}</div>
+          <div className="date"> {date} </div>
+        </div>
         <div className="detail">
-        <div className="tittle"> {tittle} {isResolved ? <div className="resolved"/> : <div className="unresolved" />}</div>
+          <div className="tittle"> {tittle} {isResolved ? <div className="resolved" /> : <div className="unresolved" />}</div>
           <div className="post"> {post}</div>
           <div className="replay">
             <NavLink to={`/questions/question/${index}`}>
               <div className="answer">Reponse : {nbrResponse}</div>
             </NavLink>
-            <div className="replay-post">
-              <div className="icon-replay" />Repondre
-            </div>
+            <NavLink to={`/actuality/replay/${index}`}>
+              <div className="replay-post">
+                <div className="icon-replay" />
+                Repondre
+              </div>
+            </NavLink>
           </div>
         </div>
       </div>

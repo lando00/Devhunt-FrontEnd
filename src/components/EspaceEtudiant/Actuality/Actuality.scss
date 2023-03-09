@@ -95,19 +95,19 @@
               background-image: url('../../../assets/icon/done.svg');
               background-position: center;
               background-repeat: no-repeat;
-              background-size: cover;
+              background-size: contain;
             }
   
             .unresolved {
               font-size: .8em;
               padding: 4px 8px;
               border-radius: .5em;
-              width: 1.5em;
-              height: 1.5em;
+              width: 1.4em;
+              height: 1.4em;
               background-image: url('../../../assets/icon/unresolved.svg');
               background-position: center;
               background-repeat: no-repeat;
-              background-size: cover;
+              background-size: contain;
             }
           }
   

@@ -57,6 +57,7 @@ export default function Replay() {
             <button type='submit' className='btn-post'>Publier</button>
           </div>
         </form>
+        <h2>Tous les reponse</h2>
         {
           responses.map(({ date, isResolved, name, lasteName, post }, index) =>
           (<div key={index} className="actuality-item">
