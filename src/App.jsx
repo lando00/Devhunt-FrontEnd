@@ -20,6 +20,9 @@ import QuestionNotif from './components/EspaceEtudiant/Notification/Question/Que
 import All from './components/EspaceEtudiant/Notification/All/All'
 import Replay from './components/EspaceEtudiant/Question/Replay/Replay'
 import './App.scss'
+import Activity from './components/EspaceEtudiant/Profil/Activity/Activity'
+import Setting from './components/EspaceEtudiant/Profil/Setting/Setting'
+import Summary from './components/EspaceEtudiant/Profil/Summary/Summary'
 
 //test1
 function App() {
@@ -47,7 +50,11 @@ function App() {
             <Route path="/questions/question/:idPost" element={<Response />} />
           </Route>
           <Route path="/answers" element={<Answer />} />
-          <Route path="/profil" element={<Profil />} />
+          <Route path="/profil" element={<Profil />} >
+            <Route path='/profil/activity' element={<Activity />}></Route>
+            <Route path='/profil/Setting' element={<Setting />}></Route>
+            <Route path='/profil/summary' element={<Summary />}></Route>
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

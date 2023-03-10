@@ -1,0 +1,12 @@
+@import '../../../../assets/Color.scss';
+
+.profil-item-setting{
+  display: flex;
+  flex: 1;
+  .form-update-profil{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5em;
+    gap: .5em;
+  }
+}
