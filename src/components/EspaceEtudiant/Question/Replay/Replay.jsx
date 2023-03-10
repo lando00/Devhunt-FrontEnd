@@ -1,38 +1,153 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import './Replay.scss'
 import avatar from '../../../../assets/avatars/face-5.jpg'
+import { v4 as uuidv4 } from 'uuid';
+import { respons, questions, commentRespons } from '../../../../data/AllData'
+
 export default function Replay() {
-  const { idPost } = useParams()
-  const [posts, setUser] = useState(
-    [
-      { id: '1', nbrResponse: 6, tittle: 'How to approach applying for a job at a company owned by a friend?', isResolved: true, name: 'mika', lasteName: 'tieko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '0', nbrResponse: 30, tittle: 'Tittre du post', isResolved: false, name: 'mari', lasteName: 'ko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '2', nbrResponse: 20, tittle: 'Tittre du post', isResolved: false, name: 'wel', lasteName: 'tieko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '3', nbrResponse: 10, tittle: 'Tittre du post', isResolved: false, name: 'mika', lasteName: 'feno', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '4', nbrResponse: 9, tittle: 'Tittre du post', isResolved: true, name: 'mika', lasteName: 'blabla', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '5', nbrResponse: 2, tittle: 'Tittre du post', isResolved: false, name: 'lodo', lasteName: 'tieko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '6', nbrResponse: 7, tittle: 'Tittre du post', isResolved: false, name: 'Chat', lasteName: 'tieko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '7', nbrResponse: 4, tittle: 'Tittre du post', isResolved: true, name: 'Gpt', lasteName: 'tieko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-    ]
+
+  const [showFormReponses, setShowFormReponses] = useState(false)
+  const [reponses, setReponses] = useState(respons)
+  const { idPost } = useParams();
+  const [replayPost , setReplayPost] = useState(
+    {
+      id: "",
+      nbrResponse: 0,
+      tittle: "",
+      isResolved: "",
+      name: '',
+      lasteName: "",
+      post: "",
+      date: ''
+
+    }
   )
-  const [responses, setResponse] = useState(
-    [
-      { id: '1', nbrResponse: 6, isResolved: true, name: 'Lando', lasteName: 'Julien', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '0', nbrResponse: 30, isResolved: false, name: 'Ludor', lasteName: 'Be', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '2', nbrResponse: 20, isResolved: false, name: 'naka', lasteName: 'michel', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '3', nbrResponse: 10, isResolved: false, name: 'wey', lasteName: 'ley', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '4', nbrResponse: 9, isResolved: true, name: 'mbappe', lasteName: 'rakoto', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '5', nbrResponse: 2, isResolved: false, name: 'Faneva', lasteName: 'rabe', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '6', nbrResponse: 7, isResolved: false, name: 'Andria', lasteName: 'Rajao', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '7', nbrResponse: 4, isResolved: true, name: 'flave', lasteName: 'Hasimbahoaka', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-    ]
+  const [replayPostRespons , setReplayPostRespons] = useState(
+    {
+      id : '',
+      id_respons : '',
+      respons : '',
+      name : '',
+      lasteName : '',
+      // date : ''
+    }
   )
-  const post = posts.find(({ id }) => id === idPost);
-  function onAddReplay(e) {
-    e.preventDefault()
+  const [commentRespon, setCommentRespos] = useState(
+    [{
+      id_respons: '',
+      repons: '',
+      name: '',
+      lasteName: ""
+    }]
+  )
+ 
+  const [replayPEZZ, setReplay] = useState({
+    id: "",
+    nbrResponse: 0,
+    tittle: "",
+    isResolved: "",
+    name: '',
+    lasteName: "",
+    post: "",
+    date: ''
+  })
+
+  const [comment, setComment] = useState({
+    name: 'John',
+    lasteName: 'Doe',
+    date: '10 mai 2022',
+    post: '',
+  });
+  const post = questions.find(post => post.id === idPost);
+
+  const commentPost = respons.filter(({ id_q }) => id_q === post.id);
+  
+  const ShowFormReponses = (id_replay) => {
+    setReplay(reponses.find(({ id }) => id === id_replay));
+    setShowFormReponses(true);
+  }
+  const handleChangeInput = (e) => {
+    setReplayPost(() =>{
+      return {
+        id : uuidv4(),
+        nbrResponse: 0,
+        tittle: "",
+        id_post : post.id,
+        isResolved : false ,
+        name : 'Ludo',
+        post : e.target.value,
+        lasteName : 'Andria',
+        date : '10 mars 2023',
+        // name: '',
+        // isResolved: "",
+        // date: ''
+        // post: "",
+        // lasteName: "",
+      }
+    })
+    setReplayPostRespons(state =>{
+      return{
+        id_respons : '',
+        post : e.target.value,
+        name : 'Team',
+        lasteName : 'Const'
+      }
+    })
+    setComment(state => {
+      return {
+        ...state,
+        post: e.target.value
+      }
+    })
   }
 
+  const onAddReplay = (e) => {
+    e.preventDefault();
+    replayPost.id  = uuidv4()
+    if(replayPost.post !== ''){
+      console.log(respons)
+      respons.push(replayPost);
+    }
+    setReplayPost(state =>{
+      return {
+        id : '',
+        id_post : '',
+        post : '',
+        name : '',
+        lasteName : '',
+        isResolved : false ,
+        date : ''
+      }
+    })
+  }
+  const onAddReplayComment = (e) => {
+    e.preventDefault();
+    replayPostRespons.id  = uuidv4()
+    if(replayPostRespons.respons != ""){
+      console.log(replayPostRespons)
+      commentRespons.push(replayPostRespons);
+    }
+    setReplayPostRespons(state =>{
+      return{
+        id : '',
+        id_respons : '',
+        respons : '',
+        name : '',
+        lasteName : ''
+      }
+    });
+
+    console.log(commentRespons)
+  }
+  const formComment = (
+    <form className="add-replay" onSubmit={(e) => { onAddReplayComment(e) }}>
+      <div className="txt-btn">
+        <textarea className='textareaReplay' name="" id="" cols="5" rows="5" onChange={(e) => { handleChangeInput(e) }} value={replayPostRespons.respons}></textarea>
+        <button type='submit' className='btn-post'>Repondre</button>
+      </div>
+    </form>
+  )
   return (
     <div className='response'>
       {post && (<div className="actuality-item">
@@ -50,16 +165,16 @@ export default function Replay() {
       </div>)}
       <div className="all-response">
         <form className="add-replay" onSubmit={(e) => { onAddReplay(e) }}>
-          <label htmlFor="">Votre réponse</label>
+          <label htmlFor="">Votre reponse</label>
           <div className="txt-btn">
-            <textarea className='textareaReplay' name="" id="" cols="30" rows="10"></textarea>
-            <button type='submit' className='btn-post'>Publier</button>
+            <textarea className='textareaReplay' name="" id="" cols="30" rows="8" onChange={(e) => { handleChangeInput(e) }} value={comment.post}></textarea>
+            <button type='submit' className='btn-post'>Commenter</button>
           </div>
         </form>
-        <h2>Tous les réponses</h2>
+        <h2>Tous les reponse</h2>
         {
-          responses.map(({ date, isResolved, name, lasteName, post }, index) =>
-          (<div key={index} className="actuality-item">
+          commentPost.map(({ date, isResolved, name, lasteName, post, id }) =>
+          (<div key={id} className="actuality-item">
             <img src={avatar} alt="" className='pdp' />
             <div className="detail-post">
               <div className="head-post">
@@ -67,13 +182,34 @@ export default function Replay() {
                 <div className="date"> {date} </div>
               </div>
               <div className="detail">
-                <div className="tittle">{isResolved && <div className="icon-done" />}</div>
                 <div className="post"> {post}</div>
               </div>
-              <div className="replay-post-single">
-                <div className="icon-replay" />
-                Répondre
-              </div>
+              {replayPEZZ.id !== id  &&
+                (<div className="replay-post-single">
+                  <button type='button' onClick={() => { ShowFormReponses(id) }}>
+                    <i className="fas fa-reply icon-replay"></i>
+                    Repondre
+                  </button>
+                </div>)
+              }
+              {useEffect(() => {
+                setCommentRespos(commentRespons.filter(({ id_respons }) => id_respons === id))
+              }, [])}
+              {commentRespon && commentRespon.map(({ name, lasteName, repons }) => (
+                <div key={id} className="actuality-item reponses">
+                  <img src={avatar} alt="" className='pdp' />
+                  <div className="detail-post">
+                    <div className="head-post">
+                      <div className="name"> {name} {lasteName}</div>
+                      {/* <div className="date"> {date} </div> */}
+                    </div>
+                    <div className="detail">
+                      <div className="post"> {repons}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              {replayPEZZ.id === id && showFormReponses && formComment}
             </div>
           </div>))
         }

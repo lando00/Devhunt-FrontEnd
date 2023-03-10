@@ -1,0 +1,48 @@
+@import '../../../../assets/Color.scss';
+
+.profil-item-activity {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: .5em 1em;
+
+  .question-activity {
+    display: flex;
+    gap: .5em;
+    border: .1em solid $white-background;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      padding: .5em 1em;
+      gap: .5em;
+
+      .txt-level {
+        color: $green-background;
+      }
+
+      .txt-question {
+        color: $blue;
+      }
+      .txt-answer{
+        color: $red;
+      }
+      span {
+        text-align: center;
+        font-size: .9em;
+      }
+    }
+
+    &::before {
+      content: '';
+      border-left: 2px solid $green;
+    }
+
+    &::after {
+      content: ' ';
+      display: block;
+      border-left: 2px solid $red;
+    }
+  }
+}

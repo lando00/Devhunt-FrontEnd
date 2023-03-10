@@ -1,68 +1,67 @@
-.forms {
-  width: 100%;
-  height: auto;
-  padding: 20px;
+.forms-add {
+  padding: 0.5em 1em;
   border: 1px solid #dee0e3;
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgb(18 38 63 / 5%);
+  box-shadow: 0 0.5rem 1rem rgba(18, 38, 63, 0.05);
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex: 1;
+  position: relative;
 }
-
-.forms .input-group {
+.forms-add .form {
+  display: flex;
+  gap: 1em;
+}
+.forms-add .form .input-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
-
-.forms input {
-  padding: 12px;
-  outline: none;
-  border: 1px solid #d3d5d8;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  color: #5d646d;
-  transition: border-color 0.15s ease-in-out;
-  width: 350px;
-  height: 35px;
-}
-
-.forms input:focus {
-  border-color: #007bff;
-}
-
-.forms label {
+.forms-add .form .input-group label {
   font-size: 0.9rem;
   color: #6c757D;
   margin-bottom: 5px;
 }
-
-.forms button {
-  padding: 8px 10px;
+.forms-add .form .input-group input {
+  padding: 0.4em 0.8em;
+  outline: none;
+  border: 0.1em solid #d3d5d8;
+  border-radius: 0.5em;
+  font-size: 0.9rem;
+  color: #5d646d;
+  transition: all 0.25s ease-in-out;
+  width: 350px;
+  height: 35px;
+}
+.forms-add .form .input-group input:focus {
+  box-shadow: 0 0.1em 0.2em #007bff;
+}
+.forms-add .form .input-group input[type=file] {
+  padding: 0;
+  border: 0;
+  background-color: inherit;
+  display: none;
+}
+.forms-add button {
+  position: absolute;
+  color: #ffffff;
   text-align: center;
   font-size: 0.9rem;
   background-color: #007bff;
-  border: 1px solid #007bff;
-  outline: none;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
   cursor: pointer;
-  border-radius: 5px;
-  color: #ffffff;
-  margin-left: auto;
-  display: block;
+  bottom: 2.5em;
+  right: 2.5em;
 }
-
-.forms button:hover {
+.forms-add button:hover {
   background-color: #0078c1;
   border-color: #0070b4;
 }
-
-.forms button:active {
-  box-shadow: 0 0 0 0.2rem rgb(61 127 255 / 50%);
-}
-
-.forms input[type="file"] {
-  padding: 0;
-  border: 0;
-}
+.forms-add button:active {
+  box-shadow: 0 0 0 0.2rem rgba(61, 127, 255, 0.5);
+}/*# sourceMappingURL=Forms.css.map */

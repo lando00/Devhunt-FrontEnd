@@ -65,6 +65,14 @@ export const questions = [
     date: "10 avril 1998",
   },
 ];
+export const commentRespons = [
+  {id : "AAA", id_respons : "1297" , repons : 'Izooo ts ampy tag ao ts mam' , name : 'Randria' , lasteName : 'KKKKKKKKK'},
+  {id : "BBBB", id_respons : "44" , repons : 'Izooo ts ampy tag ao ts mam' , name : 'Blague' , lasteName : 'nonoa'},
+  {id : "CCC", id_respons : "33" , repons : 'Izooo ts ampy tag ao ts mam' , name : 'Jean' , lasteName : 'KKKKKKKKK'},
+  {id : "DDDD", id_respons : "25" , repons : 'Izooo ts ampy tag ao ts mam' , name : 'Rajao' , lasteName : 'KKKKKKKKK'},
+  {id : "EEEE", id_respons : "44" , repons : 'Izooo ts ampy tag ao ts mam' , name : 'Fontsy' , lasteName : 'Nininao'},
+
+]
 export const respons = [
   { id: '1297', id_q: "aaa", nbrResponse: 6, isResolved: true, name: 'Lando', lasteName: 'Julien', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
   { id: '44', id_q: "aaa", nbrResponse: 6, isResolved: true, name: 'Michel', lasteName: 'Julien', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
@@ -99,3 +107,16 @@ export const notification = [
   { name: 'eren Ymir', action: 'a besoin d\'aide sur react' },
   { name: 'Marc', action: 'a aimé votre publication', id: 'question' }
 ]
+export const users = [
+  { name: 'Eric', lasteName: 'Rabe', serealNumber: '2293', mail: 'eric@gmail.com', level: 'Etudian', cours: 'GB', averticementNember: 2, created: "10 mars 2023" },
+  { name: 'Rakoto', lasteName: 'Rabe', serealNumber: '2299', mail: 'rakoto@gmail.com', level: 'Maitre', cours: 'GB', averticementNember: 2, created: "10 mars 2023" },
+  { name: 'Team', lasteName: 'Const', serealNumber: '2199', mail: 'const@gmail.com', level: 'Maitre', cours: 'GB', averticementNember: 0, created: "10 mars 2023" },
+  { name: 'Angelo', lasteName: 'Andria', serealNumber: '2393', mail: 'Angelo@gmail.com', level: 'Etudian', cours: 'SR', averticementNember: 2, created: "10 mars 2023" }
+]
+export const post = [
+  { id_s: '2199', tittle: 'Tittre ', content: 'Contenu', code: '', tagsId: '', isResolved: true, reportCont: 10, created: '20 mars 2019', file: 'file' },
+  { id_s: '2199', tittle: 'Tittre ', content: 'Contenu', code: '', tagsId: '', isResolved: true, reportCont: 10, created: '20 mars 2019', file: 'file' },
+  { id_s: '2199', tittle: 'Tittre ', content: 'Contenu', code: '', tagsId: '', isResolved: true, reportCont: 10, created: '20 mars 2019', file: 'file' },
+]
+
+

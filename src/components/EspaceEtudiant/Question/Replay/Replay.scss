@@ -10,6 +10,7 @@
     padding: 25px 20px;
     border-radius: .2em;
     border-bottom: 1px solid $white-background;
+ 
 
     .pdp {
       width: 50px !important;
@@ -126,17 +127,48 @@
         align-items: center;
         justify-content: flex-end;
         font-size: .9em;
-        .icon-replay{
-          height: 1.5em;
-          width: 1.5em;
-          background-image: url('../../../../assets/icon/replay.svg');
-          background-position: center;
-          background-size: contain;
-          background-repeat: no-repeat;
+        button{
+          background-color: transparent;
+          border: 1px solid #e1e3e3;
+          border-radius: 2px;
+          outline: none;
+          padding: 8px;
+          color: #7C7F85;
+          cursor: pointer;
+          svg{
+            margin-right: 5px;
+          }
         }
+        
       }
     }
   }
+
+  .reponses{
+    border-bottom: none;
+    .pdp{
+      width: 35px!important;
+      height: 35px!important;
+    }
+    .detail-post{
+      .head-post{
+        .name{
+          font-size: 0.8rem;
+        }
+        .date{
+          font-size: 0.7rem;
+        }
+      }
+      .detail{
+        .post{
+          font-size: 0.8rem;
+          line-height: 25px;
+        }
+      }
+    }
+    
+  }
+
   .all-response{
     display: flex;
     flex-direction: column;
