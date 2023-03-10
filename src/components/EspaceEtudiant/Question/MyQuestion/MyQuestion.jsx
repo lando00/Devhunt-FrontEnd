@@ -16,16 +16,12 @@ export default function MyQuestion() {
     }
     getQuestions(idStudent);
   },[])
+  console.log(questions)
 
-  const myQuestionsItems = questions.map((question) => {
-    return (
-      <Question question={question}></Question>
-    )
-  })
 
   return (
     <div className='my-question'>
-      {myQuestionsItems}
+      <Question questions={questions}></Question>
     </div>
   )
 }
