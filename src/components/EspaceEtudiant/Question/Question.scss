@@ -116,7 +116,19 @@
             align-items: center;
             justify-content: flex-end;
             gap: .4em;
-
+            .btn-like{
+              font-size: .8em;
+              color: #fff;
+              padding: .5em 1em;
+              background-color: $white-background;
+              border-radius: .5em;
+              &:active{
+                scale: .9;
+              }
+            }
+            .btn-like.liked{
+              background-color: $blue;
+            }
             a {
               text-decoration: none;
             }
