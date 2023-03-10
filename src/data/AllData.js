@@ -8,6 +8,7 @@ export const questions = [
     lasteName: "tieko",
     post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "10 mars 2023",
+    likeCount : 5
   },
 
   {
@@ -19,6 +20,7 @@ export const questions = [
     lasteName: "Rakoto",
     post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "10 mars 2021",
+    likeCount : 10
   },
 
   {
@@ -30,6 +32,7 @@ export const questions = [
     lasteName: "Nandrasana",
     post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "11 mars 2018",
+    likeCount : 20
   },
 
   {
@@ -41,6 +44,7 @@ export const questions = [
     lasteName: "or",
     post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "19 juin 2019",
+    likeCount : 9
   },
 
   {
@@ -52,6 +56,7 @@ export const questions = [
     lasteName: "Lando",
     post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "11 Janvier 2020",
+    likeCount : 2
   },
 
   {
@@ -63,6 +68,7 @@ export const questions = [
     lasteName: "ley",
     post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "10 avril 1998",
+    likeCount : 22
   },
 ];
 export const commentRespons = [
