@@ -42,9 +42,9 @@ export default function SidebarRight() {
             <div className="item-tag">Java</div>
             <div className="item-tag">JavaScript</div>
             <div className="item-tag">PHP</div>
-            <div className="item-tag">Node.js</div>
-            <div className="item-tag">Vue.js</div>
-            <div className="item-tag">TypeScripte</div>
+            <div className="item-tag">NodeJs</div>
+            <div className="item-tag">VueJs</div>
+            <div className="item-tag">TypeScript</div>
             <div className="item-tag">C#</div>
             <div className="item-tag">C++</div>
             <div className="item-tag">Laravel</div>
