@@ -12,7 +12,7 @@ export default function Actuality() {
   return (
     <div className='actuality'>
       <div className="head-actuality">
-        <NavLink onClick={change} className='item-nav-actuality' to="./recentQuestions">Question Recente</NavLink>
+        <NavLink onClick={change} className='item-nav-actuality' to="./recentQuestions">Questions récentes</NavLink>
         <NavLink className='item-nav-actuality' to="./popularQuestions">Populaires</NavLink>
         <NavLink className='item-nav-actuality' to="./MostViewQuestions">Plus visitées</NavLink>
       </div>

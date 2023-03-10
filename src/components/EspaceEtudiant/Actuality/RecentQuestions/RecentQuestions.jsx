@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import avatar from '../../../../assets/avatars/face-4.jpg'
 import { NavLink } from 'react-router-dom'
-// import "./RecentQuestions.scss"
 import {questions} from '../../../../data/questions'
+import ActualityItem from '../ActualityItem/ActualityItem'
 
 export default function RecentQuestions() {
-
   const [user, setUser] = useState(questions);
 
   const Actu = user.map(({ nbrResponse, isResolved, name, tittle, post, lasteName, date, id }, index) => (
@@ -33,10 +32,9 @@ export default function RecentQuestions() {
         </div>
       </div>
     </div>))
-
   return (
     <div className='containe-actuality'>
-      {Actu}
+      <ActualityItem actuality={questions}></ActualityItem>
     </div>
   )
 }

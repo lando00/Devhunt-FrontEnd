@@ -1,88 +1,83 @@
-.sidebar{
-    width: 250px;
-    height: 100%;
-    background-color: #111827;
-    color: var(--couleur-font);
-    /* position: fixed; */
+.sidebar {
+  width: 15em;
+  height: 100%;
+  background-color: #111827;
+  color: var(--couleur-font);
 }
-
-.sidebar .logo{
-    width: 100%;
-    /* height: auto; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding : 10px 0px
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em 0;
+  width: 8em;
+  height: 8em;
+  background-image: url("../../assets/icon/logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-
-.logo img{
-    width: 100px;
+.sidebar .menu {
+  display: flex;
+  flex-direction: column;
 }
-
-.menu .item{
-    list-style-type: none;   
+.sidebar .menu .item {
+  display: flex;
+  text-decoration: none;
+  color: var(--couleur-font);
+  font-size: 0.95em;
+  padding: 1em 2em;
+  transition: all 0.5s;
 }
-
-.menu .item a{
-    text-decoration: none;
-    color : var(--couleur-font);
-    font-size: 0.95rem;
-    display: flex;
-    align-items: flex-end;
-    padding: 12px 25px;
-    transition: all .25s;
+.sidebar .menu .item .icon {
+  margin-right: 1rem;
+  cursor: pointer;
+  width: 1.2rem;
+  align-self: flex-start;
 }
-
-.item .icon{
-    margin-right: 1rem;
-    cursor: pointer;
+.sidebar .menu .item:hover {
+  background: #242a38;
+  color: #fff;
 }
-
-.icon{
-    width: 1.2rem;
-    cursor: pointer;
-    align-self: flex-start;
+.sidebar .menu .item:hover .icon-arrow {
+  transform: rotate(-90deg);
 }
-
-
-.link-active{
-    background: #242a38;
-    color: #fff!important;
+.sidebar .menu .btn-sous-menu {
+  flex-direction: column;
 }
-
-
-.icon-arrow{
-    margin-left: auto;
-    width: 0.6rem;
-    align-self: center;
+.sidebar .menu .btn-sous-menu .btn-containe {
+  display: flex;
+  align-items: center;
 }
-
-.menu .item:hover a .icon-arrow{
-    transform: rotate(-90deg);
+.sidebar .menu .btn-sous-menu .btn-containe .icon-arrow {
+  display: flex;
+  align-items: center;
+  transition: all 1s;
+  width: 1em;
+  height: 1em;
+  background-image: url("../../assets/icon/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-
-
-.sous-menu{
- height: 0px;
- padding-left: 42px ;
- overflow: hidden;
- transition: height 0.25s linear;
- background: #242a38;
+.sidebar .menu .btn-sous-menu:hover {
+  background: inherit;
+  color: inherit;
 }
-
-
-.menu .item a:hover{
-    background: #242a38;
-    color: #fff;
+.sidebar .menu .btn-sous-menu:hover .icon-arrow {
+  transform: rotate(-90deg);
 }
-
-.sous-menu .item a, .sous-menu .item a:hover{
-    padding: 10px 20px;
-    background-color: transparent;
-    cursor : pointer;
-    
+.sidebar .menu .sous-menu {
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  padding: 0;
 }
-
-.show{
-    height: 80px;
+.sidebar .menu .show {
+  height: 6em;
+  display: flex;
+  flex-direction: column;
 }
+.sidebar .menu .active {
+  background: #38445f;
+  color: #fff !important;
+}/*# sourceMappingURL=Sidebar.css.map */

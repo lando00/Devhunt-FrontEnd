@@ -75,13 +75,13 @@ export default function Replay() {
       </div>)}
       <div className="all-response">
         <form className="add-replay" onSubmit={(e) => { onAddReplay(e) }}>
-          <label htmlFor="">Votre reponse</label>
+          <label htmlFor="">Votre réponse</label>
           <div className="txt-btn">
             <textarea className='textareaReplay' name="" id="" cols="30" rows="10" onChange={(e)=>{handleChangeInput(e)}} value={comment.post}></textarea>
             <button type='submit' className='btn-post'>Commenter</button>
           </div>
         </form>
-        <h2>Tous les reponse</h2>
+        <h2>Tous les réponses</h2>
         {
           reponses.map(({ date, isResolved, name, lasteName, post }, index) =>
           (<div key={index} className="actuality-item">
@@ -111,10 +111,8 @@ export default function Replay() {
               {showFormReponses && formReponseComment}
 
               <div className="replay-post-single">
-                <button type='button' onClick={() => {setShowFormReponses(true)}}>
-                  <i className="fas fa-reply icon-replay"></i>
-                  Repondre
-                </button>
+                <div className="icon-replay" />
+                Repondre
               </div>
               
 

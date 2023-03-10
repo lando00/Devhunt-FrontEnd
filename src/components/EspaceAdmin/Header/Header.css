@@ -2,66 +2,79 @@ header {
   padding: 10px 25px;
   display: flex;
   align-items: center;
-  width: calc(100vw - 250px);
-  height: 55px;
-  background-color: #ffffff;
-  position: sticky;
-  top: 0;
-  box-shadow: 0px 1px 2px rgb(0 0 0 / 10%);
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  height: 4.5em;
 }
-
-header .icon-avatar {
-  width: 35px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-header .icon-arrow {
-  cursor: pointer;
-}
-
 header .icon {
   align-self: center;
-  margin-right: 25px;
+  width: 1.5em;
+  height: 1.5em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-
-header .iconMenu,
-header .iconSearch {
-  width: 1rem;
+header .head-left {
+  display: flex;
+  gap: 1em;
 }
-
-header .iconSearch {
-  margin: 5px;
+header .head-left .icon-menu {
+  background-image: url("../../assets/icon/menu.svg");
 }
-
-header input {
-  margin-right: auto;
-  height: calc(1.5em + 0.75rem + 2px);
+header .head-left .input {
+  display: flex;
+  border: 0.1em solid #333;
+  padding: 0.2em 0.3em;
+  border-radius: 0.5em;
+}
+header .head-left .input input {
   padding: 0.375rem 0.3rem;
   font-size: 0.875rem;
   border: none;
   outline: none;
-  width: 200px;
   background-color: transparent;
 }
-
-
-header .user-connected {
+header .head-left .input .icon-search {
+  background-image: url("../../assets/icon/search.svg");
+}
+header .rigth {
+  display: flex;
+  gap: 1em;
+}
+header .rigth .icon-sun {
+  background-image: url("../../assets/icon/sun.svg");
+}
+header .rigth .icon-notif {
+  background-image: url("../../assets/icon/notification.svg");
+}
+header .rigth .user-connected {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.user-connected .info-user {
+header .rigth .user-connected .icon-avatar {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  background-image: url("../../assets/avatar.png");
+}
+header .rigth .user-connected .info-user {
   display: flex;
   flex-direction: column;
   margin: 0px 8px;
   cursor: pointer;
 }
-
-.info-user .nom {
+header .rigth .user-connected .info-user .nom {
   font-size: 0.8rem;
   color: #6c757D;
   font-weight: 550;
   cursor: pointer;
 }
+header .rigth .user-connected .icon-arrow {
+  cursor: pointer;
+}
+header .rigth .user-connected .icon-arrow {
+  background-image: url("../../assets/icon/arrow.svg");
+}/*# sourceMappingURL=Header.css.map */

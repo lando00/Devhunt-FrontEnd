@@ -3,18 +3,29 @@ import { useParams } from 'react-router'
 import './Response.scss'
 import { questions , respons } from '../../../../data/questions'
 import avatar from '../../../../assets/avatars/face-4.jpg'
-import QuestionItem from '../QuestionItems/QuestionItem'
 export default function Response() {
   const { idPost } = useParams()
-  const post = questions.find(({ id }) => id === idPost);
-
+  const post = questions.find(({ id }) => id === idPost)
+  const allRespons = respons.filter(({id_q})=> id_q ===idPost )
   return (
     <div className='response'>
-      {post &&<QuestionItem questions={post}></QuestionItem>}
+      {post && (<div className="actuality-item">
+        <img src={avatar} alt="" className='pdp' />
+        <div className="detail-post">
+          <div className="head-post">
+            <div className="name"> {post.name} {post.lasteName}</div>
+            <div className="date"> {post.date} </div>
+          </div>
+          <div className="detail">
+            <div className="tittle"> {post.tittle} {post.isResolved ? <div className="resolved">Résolue</div> : <div className="unresolved">(Non Resolue)</div>}</div>
+            <div className="post"> {post.post}</div>
+          </div>
+        </div>
+      </div>)}
       <div className="all-response">
         {
-          respons.map(({ date, isResolved, name, lasteName, post }, index) =>
-          (<div key={index} className="actuality-item">
+          allRespons.map(({ date, isResolved, name, lasteName, post , id}) =>
+          (<div key={id} className="actuality-item">
             <img src={avatar} alt="" className='pdp' />
             <div className="detail-post">
               <div className="head-post">
