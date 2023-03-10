@@ -12,7 +12,7 @@ export default function ActualityItem({ actuality }) {
   // post: string;
   // date: string;
 const populary =  actuality.map(({ id , nbrResponse , tittle , isResolved , name , lasteName , post , date}) => (
-    <div key={id} className="actuality-item">
+    <div key={id} className="actuality-items">
       <img src={avatar} alt="" className='pdp' />
       <div className="detail-post">
         <div className="head-post">
@@ -38,7 +38,7 @@ const populary =  actuality.map(({ id , nbrResponse , tittle , isResolved , name
     </div>
   ))
   return (
-    <div className="all-actualy">
+    <div className="all-actuality">
       { populary }
     </div>
   )
