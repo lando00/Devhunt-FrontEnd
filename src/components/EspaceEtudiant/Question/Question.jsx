@@ -19,9 +19,7 @@ export default function Question() {
           Questions non r&eacute;solues
         </NavLink>
       </div>
-      <div className="containe-actuality">
       <Outlet />
-      </div>
     </div>
   )
 }
