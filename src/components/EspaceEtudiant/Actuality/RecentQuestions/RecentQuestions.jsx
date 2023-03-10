@@ -8,7 +8,7 @@ export default function RecentQuestions() {
 
   const [user, setUser] = useState(questions);
 
-  const Actu = user.map(({ nbrResponse, isResolved, name, tittle, post, lasteName, date }, index) => (
+  const Actu = user.map(({ nbrResponse, isResolved, name, tittle, post, lasteName, date, id }, index) => (
     <div key={index} className="actuality-item">
       <img src={avatar} alt="" className='pdp' />
       <div className="detail-post">
@@ -23,7 +23,7 @@ export default function RecentQuestions() {
             <NavLink to={`/questions/question/${index}`}>
               <div className="answer">Reponse : {nbrResponse}</div>
             </NavLink>
-            <NavLink to={`/actuality/replay/${index}`}>
+            <NavLink to={`/actuality/replay/${id}`}>
               <div className="replay-post">
                 <div className="icon-replay" />
                 Repondre
