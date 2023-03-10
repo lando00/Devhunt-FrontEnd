@@ -7,28 +7,10 @@ export default function Login() {
 
   const [serialNumber, setSerialNumber] = useState();
   const [passWord, setPassWord] = useState();
-  const [user, setUser] = useState({
-    student: {},
-    authToken: ''
-  })
+  const [user, setUser] = useState({})
+  const [auth, setAuth] = useState(false)
 
   const navigate = useNavigate();
-
-  // const login = async () => {
-  //   axios
-  //     .post("/devHunt2/login", {
-  //       serialNumber,
-  //       passWord
-  //     })
-  //     .then(response => {
-  //       const authenticated = response.data.data
-  //       authentication(authenticated);
-  //       // navigate('/actuality')
-  //     })
-  //     .catch(err => {
-  //       console.log(err)
-  //     })
-  // }
 
   const login = async (event) =>{
     event.preventDefault();
@@ -40,11 +22,19 @@ export default function Login() {
       ...user,
       ...response.data.data
     }))
+    setAuth(true)
   }
 
   useEffect(() => {
     console.log(user)
+    localStorage.setItem('user', JSON.stringify(user))
   }, [user])
+
+  useEffect(() => {
+    if(auth){
+      navigate('/actuality')
+    }
+  },[auth])
 
   return (
       <div className='loginContainer'>
