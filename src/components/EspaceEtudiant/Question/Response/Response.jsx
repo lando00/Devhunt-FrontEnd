@@ -1,35 +1,12 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import './Response.scss'
+import { questions , respons } from '../../../../data/questions'
 import avatar from '../../../../assets/avatars/face-4.jpg'
 export default function Response() {
   const { idPost } = useParams()
-  const [posts, setUser] = useState(
-    [
-      { id: '1', nbrResponse: 6, tittle: 'How to approach applying for a job at a company owned by a friend?', isResolved: true, name: 'mika', lasteName: 'tieko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '0', nbrResponse: 30, tittle: 'Tittre du post', isResolved: false, name: 'mari', lasteName: 'ko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '2', nbrResponse: 20, tittle: 'Tittre du post', isResolved: false, name: 'wel', lasteName: 'tieko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '3', nbrResponse: 10, tittle: 'Tittre du post', isResolved: false, name: 'mika', lasteName: 'feno', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '4', nbrResponse: 9, tittle: 'Tittre du post', isResolved: true, name: 'mika', lasteName: 'blabla', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '5', nbrResponse: 2, tittle: 'Tittre du post', isResolved: false, name: 'lodo', lasteName: 'tieko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '6', nbrResponse: 7, tittle: 'Tittre du post', isResolved: false, name: 'Chat', lasteName: 'tieko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '7', nbrResponse: 4, tittle: 'Tittre du post', isResolved: true, name: 'Gpt', lasteName: 'tieko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-    ]
-  )
-  const [responses, setResponse] = useState(
-    [
-      { id: '1', nbrResponse: 6, isResolved: true, name: 'Lando', lasteName: 'Julien', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '0', nbrResponse: 30, isResolved: false, name: 'Ludor', lasteName: 'Be', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '2', nbrResponse: 20, isResolved: false, name: 'naka', lasteName: 'michel', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '3', nbrResponse: 10, isResolved: false, name: 'wey', lasteName: 'ley', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '4', nbrResponse: 9, isResolved: true, name: 'mbappe', lasteName: 'rakoto', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '5', nbrResponse: 2, isResolved: false, name: 'Faneva', lasteName: 'rabe', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '6', nbrResponse: 7, isResolved: false, name: 'Andria', lasteName: 'Rajao', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-      { id: '7', nbrResponse: 4, isResolved: true, name: 'flave', lasteName: 'Hasimbahoaka', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-    ]
-  )
-  const post = posts.find(({ id }) => id === idPost);
-
+  const post = questions.find(({ id }) => id === idPost)
+  const allRespons = respons.filter(({id_q})=> id_q ===idPost )
   return (
     <div className='response'>
       {post && (<div className="actuality-item">
@@ -47,8 +24,8 @@ export default function Response() {
       </div>)}
       <div className="all-response">
         {
-          responses.map(({ date, isResolved, name, lasteName, post }, index) =>
-          (<div key={index} className="actuality-item">
+          allRespons.map(({ date, isResolved, name, lasteName, post , id}) =>
+          (<div key={id} className="actuality-item">
             <img src={avatar} alt="" className='pdp' />
             <div className="detail-post">
               <div className="head-post">
