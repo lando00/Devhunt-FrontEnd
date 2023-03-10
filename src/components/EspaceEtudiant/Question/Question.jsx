@@ -7,16 +7,16 @@ export default function Question() {
     <div className='question-nav'>
       <div className="head-actuality">
         <NavLink to='./newQuestion' className='item-nav-question'>
-          Nouvelle Question
+          Nouvelle question
         </NavLink>
         <NavLink to='./myQuestion'className='item-nav-question'>
-          Mes Question
+          Mes Questions
         </NavLink>
         <NavLink to="./questionResolve" className="item-nav-question">
-          Question Resolue
+          Questions r&eacute;solues
         </NavLink>
         <NavLink to="./questionUnresolve" className="item-nav-question">
-          Question non Resolue
+          Questions non r&eacute;solues
         </NavLink>
       </div>
       <div className="containe-actuality">

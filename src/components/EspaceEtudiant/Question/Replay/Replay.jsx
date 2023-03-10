@@ -50,13 +50,13 @@ export default function Replay() {
       </div>)}
       <div className="all-response">
         <form className="add-replay" onSubmit={(e) => { onAddReplay(e) }}>
-          <label htmlFor="">Votre reponse</label>
+          <label htmlFor="">Votre réponse</label>
           <div className="txt-btn">
             <textarea className='textareaReplay' name="" id="" cols="30" rows="10"></textarea>
             <button type='submit' className='btn-post'>Publier</button>
           </div>
         </form>
-        <h2>Tous les reponse</h2>
+        <h2>Tous les réponses</h2>
         {
           responses.map(({ date, isResolved, name, lasteName, post }, index) =>
           (<div key={index} className="actuality-item">
@@ -72,7 +72,7 @@ export default function Replay() {
               </div>
               <div className="replay-post-single">
                 <div className="icon-replay" />
-                Repondre
+                Répondre
               </div>
             </div>
           </div>))

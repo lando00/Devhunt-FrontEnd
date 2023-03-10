@@ -11,7 +11,7 @@ export default function QuestionItem({questions}) {
           <div className="date"> {date} </div>
         </div>
         <div className="detail">
-          <div className="tittle"> {tittle} {isResolved ? <div className="resolved">(Résolue)</div> : <div className="unresolved" >(Nom Resolue)</div>}</div>
+          <div className="tittle"> {tittle} {isResolved ? <div className="resolved">(Résolue)</div> : <div className="unresolved" >(Non résolue)</div>}</div>
           <div className="post"> {post}</div>
           <div className="replay">
             <NavLink to={`/questions/question/${id}`}>

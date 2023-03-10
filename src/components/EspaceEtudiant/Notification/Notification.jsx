@@ -8,8 +8,8 @@ export default function Notification() {
     <div className='notification'>
       <div className="head-notification">
         <NavLink className='item-nav-notification' to="./all">Tous</NavLink>
-        <NavLink className='item-nav-notification' to="./questions">Question</NavLink>
-        <NavLink className='item-nav-notification' to="./video">Video</NavLink>
+        <NavLink className='item-nav-notification' to="./questions">Questions</NavLink>
+        <NavLink className='item-nav-notification' to="./video">Vid&eacute;os</NavLink>
       </div>
         <Outlet />
     </div>
