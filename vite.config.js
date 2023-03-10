@@ -9,4 +9,5 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  // comment rediriger un lien dans outlet réagir
 });

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ActualityItem from '../ActualityItem/ActualityItem'
-import { questions } from '../../../../data/questions';
+import { questions } from '../../../../data/AllData';
 // import "./Populary.scss"
 
 export default function PopularQuestions() {

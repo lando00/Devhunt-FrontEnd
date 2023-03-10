@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import QuestionItem from '../QuestionItems/QuestionItem'
-import { questions } from '../../../../data/questions'
+import { questions } from '../../../../data/AllData'
 export default function Resolve() {
   const questionResolved = questions.filter(({isResolved})=> isResolved === true)
   return (

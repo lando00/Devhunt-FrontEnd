@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import avatar from '../../../../assets/avatars/face-4.jpg'
 import { NavLink } from 'react-router-dom'
-import {questions} from '../../../../data/questions'
+import {questions} from '../../../../data/AllData'
 import ActualityItem from '../ActualityItem/ActualityItem'
 
 export default function RecentQuestions() {

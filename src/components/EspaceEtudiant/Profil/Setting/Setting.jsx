@@ -1,5 +1,5 @@
 import React from 'react'
-import { users } from '../../../../data/questions'
+import { users } from '../../../../data/AllData'
 import './setting.scss'
 export default function Setting() {
   const user = users.find(({ serealNumber }) => serealNumber === '2199')
