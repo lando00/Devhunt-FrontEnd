@@ -1,0 +1,19 @@
+.LiveEnCours{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    .list{
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .new-live{
+        flex: 2;
+        background-color: #A1A1A1;
+        padding: 10px;
+        text-align: center;
+        border-radius: 10px;
+    }
+}

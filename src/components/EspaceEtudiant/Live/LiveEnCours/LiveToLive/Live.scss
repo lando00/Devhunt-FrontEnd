@@ -1,0 +1,83 @@
+.bloc-modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    .overlay {
+      position: fixed;
+      inset: 0;
+    }
+    .modal {
+      position: absolute;
+      background: white;
+      color: #333;
+      border-radius: 10px;
+      width: 400px;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      padding: 15px 15px;
+        
+      .video{
+          flex: 10;
+          background-color: red;
+      }
+      .comments{
+          flex: 4;
+          background-color: #fff;
+          overflow-y: auto;
+          display: flex;
+          flex-direction: column;
+          padding: 5px 10px;
+          border-radius: 10px;
+          margin-bottom: 10px;
+          gap: 5px;
+          .comment{
+              display: flex;
+              background-color: #E1E1E1;
+              padding: 10px 5px;
+
+            .pdp{
+                width: 30px;
+                height: 30px;
+                background-color: #333;
+                border-radius: 50%;
+            }
+            .content{
+                .user-name{
+                    font-size: 15px;
+                    font-weight: 700;
+                }
+                .commentaire{
+                    font-size: 15px;
+                }
+            }
+          }
+
+          
+      }
+      .form{
+          flex:2;
+          display: flex;
+        .text{
+            flex: 7;
+        }
+        .envoyer{
+            flex: 3;
+            background-color: rgb(88, 9, 236);
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+      }
+    }
+  }
+  
