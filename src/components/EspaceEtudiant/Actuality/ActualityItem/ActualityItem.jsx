@@ -26,6 +26,9 @@ const populary =  actuality.map(({ id , nbrResponse , tittle , isResolved , name
           <div className="btn-like">
               J'aime : 
             </div>
+            <div className="btn-singal">
+              Singaler
+            </div>
             <NavLink to={`/questions/question/${id}`}>
               <div className="answer">Réponses : {nbrResponse}</div>
             </NavLink>

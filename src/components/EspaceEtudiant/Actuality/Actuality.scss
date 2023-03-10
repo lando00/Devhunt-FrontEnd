@@ -126,8 +126,15 @@
                 scale: .9;
               }
             }
-            a {
-              text-decoration: none;
+            .btn-singal{
+              font-size: .8em;
+              color: #fff;
+              padding: .5em 1em;
+              background-color: $color-text;
+              border-radius: .5em;
+              &:active{
+                scale: .9;
+              }
             }
   
             .comment {
