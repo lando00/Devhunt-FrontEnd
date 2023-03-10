@@ -79,11 +79,6 @@ export default function Replay() {
         post : e.target.value,
         lasteName : 'Andria',
         date : '10 mars 2023',
-        // name: '',
-        // isResolved: "",
-        // date: ''
-        // post: "",
-        // lasteName: "",
       }
     })
     setReplayPostRespons(state =>{
