@@ -15,7 +15,7 @@ export default function QuestionItem({ questions }) {
       <div className="detail-post">
         <div className="head-post">
           {/* <div className="name">{lasteName} {name}</div> */}
-          <div className="date"> {Date(created)} </div>
+          <div className="date"> {created} </div>
         </div>
         <div className="detail">
           <div className="tittle"> {title} {isResolved ? <div className="resolved">(Résolue)</div> : <div className="unresolved" >(Non résolue)</div>}</div>
