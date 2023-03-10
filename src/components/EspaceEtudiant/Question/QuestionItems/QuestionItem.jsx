@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import avatar from '../../../../assets/avatars/face-8.jpg'
+
+
 export default function QuestionItem({ questions }) {
   const onLike = ()=>{
     const like = document.getElementsByClassName('btn-like')
@@ -29,6 +31,7 @@ export default function QuestionItem({ questions }) {
         </div>
       </div>
     </div>))
+
   return (
     <div className='QuestionItem'>
       {post}
