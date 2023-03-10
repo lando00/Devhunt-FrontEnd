@@ -1,7 +1,7 @@
 export const questions = [
   {
     id: 'ggg',
-    nbrResponse: 6,
+    nbrResponse: 10,
     tittle: "Question 1",
     isResolved: true,
     name: "mika",
@@ -34,7 +34,7 @@ export const questions = [
 
   {
     id: 'ccc',
-    nbrResponse: 6,
+    nbrResponse: 70,
     tittle: "Question 4",
     isResolved: false,
     name: "Ludo",
@@ -45,7 +45,7 @@ export const questions = [
 
   {
     id : 'aaa',
-    nbrResponse: 6,
+    nbrResponse: 9,
     tittle: "Question 5",
     isResolved: true,
     name: "Julien",
@@ -56,7 +56,7 @@ export const questions = [
 
   {
     id : 'bbb',
-    nbrResponse: 6,
+    nbrResponse: 16,
     tittle: "Question 6",
     isResolved: false,
     name: "Wes",
