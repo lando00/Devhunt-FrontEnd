@@ -21,7 +21,7 @@ export default function SidebarRight() {
           <div className="tittle"> {tittle} {isResolved ? <div className="resolved">Résolue</div> : <div className="not-resolved">Non Resolue</div>}</div>
           <div className="post"> {post}</div>
           <div className="replay">
-            <div className="answer">Reponse : {nbrResponse}</div>
+            <div className="answer">Réponse : {nbrResponse}</div>
             {/* <div className="replay-post">Repondre</div> */}
           </div>
         </div>
@@ -31,12 +31,12 @@ export default function SidebarRight() {
     <div className='sidebar-right'>
       <div className="containe">
         <div className="question">
-          <div className="item"> <div className="txt-question">Question</div><span>11</span></div>
-          <div className="item"><div className="txt-answer">Reponse</div><span>30</span></div>
+          <div className="item"> <div className="txt-question">Questions</div><span>11</span></div>
+          <div className="item"><div className="txt-answer">Réponses</div><span>30</span></div>
         </div>
         <div className="tag">
           <div className="head-tag">
-            Mot clé
+            Mots clés
           </div>
           <div className="tag-containe">
             <div className="item-tag">Java</div>
