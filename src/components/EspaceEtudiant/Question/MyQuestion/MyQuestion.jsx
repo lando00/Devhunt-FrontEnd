@@ -9,19 +9,17 @@ export default function MyQuestion() {
   const [questions, setQuestions] = useState([])
 
   const idStudent = JSON.parse(localStorage.getItem('user'));
-  useEffect(() =>{
-    const getQuestions = async(id) => {
-      const response  = await axios.get(`/devHunt2/students/posts/${id}`)
+  useEffect(() => {
+    const getQuestions = async (id) => {
+      const response = await axios.get(`/devHunt2/students/posts/${id}`)
       setQuestions(response.data.data)
     }
     getQuestions(idStudent);
-  },[])
+  }, [])
   console.log(questions)
 
 
   return (
-    <div className='my-question'>
-      <Question questions={questions}></Question>
-    </div>
+    <Question questions={questions}></Question>
   )
 }

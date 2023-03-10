@@ -33,7 +33,7 @@
     }
   }
 
-  .containe-actuality {
+  .QuestionItem {
     display: flex;
     flex-direction: column;
     gap: .5em;
@@ -55,7 +55,7 @@
         display: flex;
         flex-direction: column;
         gap: .5em;
-
+        flex: 1;
 
         .head-post {
           display: flex;
@@ -113,7 +113,7 @@
           .replay {
             display: flex;
             padding: .5em 1em;
-            align-items: center;
+            // align-items: center;
             justify-content: flex-end;
             gap: .4em;
             .btn-like{

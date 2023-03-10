@@ -25,7 +25,7 @@ export default function QuestionItem({ questions }) {
               J'aime : {likeCount}
             </div>
             <NavLink to={`/questions/question/${_id}`}>
-              <div className="answer">Réponse(s) : </div>
+              <div className="answer">Réponse(s) :  </div>
             </NavLink> 
           </div>
         </div>

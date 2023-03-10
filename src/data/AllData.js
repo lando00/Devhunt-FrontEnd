@@ -6,7 +6,7 @@ export const questions = [
     isResolved: true,
     name: "mika",
     lasteName: "tieko",
-    post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
+    post: "Lorem ipsum, dolor sit amet consectetur quae.",
     date: "10 mars 2023",
     likeCount : 5
   },
@@ -18,7 +18,7 @@ export const questions = [
     isResolved: false,
     name: "ANDRIA",
     lasteName: "Rakoto",
-    post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
+    post: "Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "10 mars 2021",
     likeCount : 10
   },
@@ -30,7 +30,7 @@ export const questions = [
     isResolved: true,
     name: "RABE",
     lasteName: "Nandrasana",
-    post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
+    post: " adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "11 mars 2018",
     likeCount : 20
   },
@@ -42,7 +42,7 @@ export const questions = [
     isResolved: false,
     name: "Ludo",
     lasteName: "or",
-    post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
+    post: "consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "19 juin 2019",
     likeCount : 9
   },
