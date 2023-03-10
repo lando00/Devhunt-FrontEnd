@@ -7,7 +7,8 @@ export default function Login() {
 
   const [serialNumber, setSerialNumber] = useState();
   const [passWord, setPassWord] = useState();
-  const [user, setUser] = useState({})
+  const [userId, setUserId] = useState()
+  const [token, setToken] = useState()
   const [auth, setAuth] = useState(false)
 
   const navigate = useNavigate();
@@ -18,17 +19,16 @@ export default function Login() {
       serialNumber,
       passWord
     })
-    setUser(user =>({
-      ...user,
-      ...response.data.data
-    }))
+    setUserId(response.data.data.student._id)
+    setToken(response.data.data.authToken)
     setAuth(true)
   }
 
   useEffect(() => {
-    console.log(user)
-    localStorage.setItem('user', JSON.stringify(user))
-  }, [user])
+    console.log(userId)
+    localStorage.setItem('user', JSON.stringify(userId))
+    localStorage.setItem('token', JSON.stringify(token))
+  }, [userId, token])
 
   useEffect(() => {
     if(auth){

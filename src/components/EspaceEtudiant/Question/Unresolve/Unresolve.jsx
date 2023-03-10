@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { questions } from '../../../../data/questions'
+import { questions } from '../../../../data/AllData'
 import QuestionItem from '../QuestionItems/QuestionItem'
 export default function Unresolve() {
   const questionUnresolved = questions.filter(({isResolved})=> !isResolved)

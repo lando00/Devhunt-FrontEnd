@@ -3,11 +3,36 @@ import { useParams } from 'react-router'
 import './Replay.scss'
 import avatar from '../../../../assets/avatars/face-5.jpg'
 import { v4 as uuidv4 } from 'uuid';
-import { respons, questions, commentRespons } from '../../../../data/questions'
+import { respons, questions, commentRespons } from '../../../../data/AllData'
 
 export default function Replay() {
 
+  const [showFormReponses, setShowFormReponses] = useState(false)
+  const [reponses, setReponses] = useState(respons)
   const { idPost } = useParams();
+  const [replayPost , setReplayPost] = useState(
+    {
+      id: "",
+      nbrResponse: 0,
+      tittle: "",
+      isResolved: "",
+      name: '',
+      lasteName: "",
+      post: "",
+      date: ''
+
+    }
+  )
+  const [replayPostRespons , setReplayPostRespons] = useState(
+    {
+      id : '',
+      id_respons : '',
+      respons : '',
+      name : '',
+      lasteName : '',
+      // date : ''
+    }
+  )
   const [commentRespon, setCommentRespos] = useState(
     [{
       id_respons: '',
@@ -16,12 +41,8 @@ export default function Replay() {
       lasteName: ""
     }]
   )
-
-  const post = questions.find(post => post.id === idPost);
-
-  const commentPost = respons.filter(({ id_q }) => id_q === post.id);
  
-  const [replay, setReplay] = useState({
+  const [replayPEZZ, setReplay] = useState({
     id: "",
     nbrResponse: 0,
     tittle: "",
@@ -32,21 +53,42 @@ export default function Replay() {
     date: ''
   })
 
-  const [showFormReponses, setShowFormReponses] = useState(false);
-  const [reponses, setReponses] = useState(respons);
   const [comment, setComment] = useState({
     name: 'John',
     lasteName: 'Doe',
     date: '10 mai 2022',
     post: '',
   });
-  
+  const post = questions.find(post => post.id === idPost);
+
+  const commentPost = respons.filter(({ id_q }) => id_q === post.id);
   
   const ShowFormReponses = (id_replay) => {
     setReplay(reponses.find(({ id }) => id === id_replay));
     setShowFormReponses(true);
   }
   const handleChangeInput = (e) => {
+    setReplayPost(() =>{
+      return {
+        id : uuidv4(),
+        nbrResponse: 0,
+        tittle: "",
+        id_post : post.id,
+        isResolved : false ,
+        name : 'Ludo',
+        post : e.target.value,
+        lasteName : 'Andria',
+        date : '10 mars 2023',
+      }
+    })
+    setReplayPostRespons(state =>{
+      return{
+        id_respons : '',
+        post : e.target.value,
+        name : 'Team',
+        lasteName : 'Const'
+      }
+    })
     setComment(state => {
       return {
         ...state,
@@ -56,56 +98,47 @@ export default function Replay() {
   }
 
   const onAddReplay = (e) => {
-    //   let v = {
-    //     id: "efad3",
-    //     id_q : 'ggg',
-    //     nbrResponse: 10,
-    //     tittle: "TITEYT",
-    //     isResolved: true,
-    //     name: 'Name',
-    //     lasteName: "Laste",
-    //     post: "Post",
-    //     date: 'Date'
-    //   }
-    //  let y =  respons.find(({id})=> id === v.id);
-    //  if(!y) respons.push(v);
-    //   console.log(respons);
     e.preventDefault();
-    setReponses(state => {
-      return [
-        comment,
-        ...state
-      ]
-    })
-    setComment(state => {
+    replayPost.id  = uuidv4()
+    if(replayPost.post !== ''){
+      console.log(respons)
+      respons.push(replayPost);
+    }
+    setReplayPost(state =>{
       return {
-        ...state,
-        post: '',
+        id : '',
+        id_post : '',
+        post : '',
+        name : '',
+        lasteName : '',
+        isResolved : false ,
+        date : ''
       }
     })
   }
   const onAddReplayComment = (e) => {
-    //   let v = {
-    //     id: "efad3",
-    //     id_q : 'ggg',
-    //     nbrResponse: 10,
-    //     tittle: "TITEYT",
-    //     isResolved: true,
-    //     name: 'Name',
-    //     lasteName: "Laste",
-    //     post: "Post",
-    //     date: 'Date'
-    //   }
-    //  let y =  respons.find(({id})=> id === v.id);
-    //  if(!y) respons.push(v);
-    //   console.log(respons);
     e.preventDefault();
-    console.log(comment)
+    replayPostRespons.id  = uuidv4()
+    if(replayPostRespons.respons != ""){
+      console.log(replayPostRespons)
+      commentRespons.push(replayPostRespons);
+    }
+    setReplayPostRespons(state =>{
+      return{
+        id : '',
+        id_respons : '',
+        respons : '',
+        name : '',
+        lasteName : ''
+      }
+    });
+
+    console.log(commentRespons)
   }
   const formComment = (
     <form className="add-replay" onSubmit={(e) => { onAddReplayComment(e) }}>
       <div className="txt-btn">
-        <textarea className='textareaReplay' name="" id="" cols="5" rows="5" onChange={(e) => { handleChangeInput(e) }} value={comment.post}></textarea>
+        <textarea className='textareaReplay' name="" id="" cols="5" rows="5" onChange={(e) => { handleChangeInput(e) }} value={replayPostRespons.respons}></textarea>
         <button type='submit' className='btn-post'>Repondre</button>
       </div>
     </form>
@@ -146,7 +179,7 @@ export default function Replay() {
               <div className="detail">
                 <div className="post"> {post}</div>
               </div>
-              {replay.id !== id  &&
+              {replayPEZZ.id !== id  &&
                 (<div className="replay-post-single">
                   <button type='button' onClick={() => { ShowFormReponses(id) }}>
                     <i className="fas fa-reply icon-replay"></i>
@@ -171,7 +204,7 @@ export default function Replay() {
                   </div>
                 </div>
               ))}
-              {replay.id === id && showFormReponses && formComment}
+              {replayPEZZ.id === id && showFormReponses && formComment}
             </div>
           </div>))
         }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { users, post } from '../../../../data/questions'
+import { users, post } from '../../../../data/AllData'
 import './Activity.scss'
 export default function Activity() {
   const user = users.find(({ serealNumber }) => serealNumber === '2199')

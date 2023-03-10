@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './UploadFile.scss'
 
-function ImageUploader() {
+function ImageUploader(props) {
   const [image, setImage] = useState(null);
 
   function handleImageUpload(event) {
@@ -21,7 +21,7 @@ function ImageUploader() {
 
   return (
     <>
-        <input type="file" onChange={handleImageUpload} />
+        <input type="file" name={addQuestion.picture} onChange={handleImageUpload} />
         {image && <img src={image} alt="Uploaded image" />}
     </>
   );
