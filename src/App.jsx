@@ -23,6 +23,9 @@ import './App.scss'
 import Activity from './components/EspaceEtudiant/Profil/Activity/Activity'
 import Setting from './components/EspaceEtudiant/Profil/Setting/Setting'
 import Summary from './components/EspaceEtudiant/Profil/Summary/Summary'
+import LiveEnCours from './components/EspaceEtudiant/Live/LiveEnCours/LiveEnCours'
+import LiveAvenir from './components/EspaceEtudiant/Live/LiveAvenir/LiveAvenir'
+import LiveTerminer from './components/EspaceEtudiant/Live/LiveTerminer/LiveTerminer'
 
 //test1
 function App() {
@@ -49,7 +52,11 @@ function App() {
             <Route path="/questions/questionUnresolve" element={<Unresolve />}></Route>
             <Route path="/questions/question/:idPost" element={<Response />} />
           </Route>
-          <Route path="/answers" element={<Answer />} />
+          <Route path="/answers" element={<Answer />}> 
+            <Route path='/answers/liveEnCours' element={<LiveEnCours />} />
+            <Route path='/answers/liveAvenir' element={<LiveAvenir />} />
+            <Route path='/answers/liveTerminer' element={<LiveTerminer />} />
+          </Route>
           <Route path="/profil" element={<Profil />} >
             <Route path='/profil/activity' element={<Activity />}></Route>
             <Route path='/profil/Setting' element={<Setting />}></Route>

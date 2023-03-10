@@ -8,6 +8,7 @@ export const questions = [
     lasteName: "tieko",
     post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "10 mars 2023",
+    likeCount : 5
   },
 
   {
@@ -19,6 +20,7 @@ export const questions = [
     lasteName: "Rakoto",
     post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "10 mars 2021",
+    likeCount : 10
   },
 
   {
@@ -30,6 +32,7 @@ export const questions = [
     lasteName: "Nandrasana",
     post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "11 mars 2018",
+    likeCount : 20
   },
 
   {
@@ -41,6 +44,7 @@ export const questions = [
     lasteName: "or",
     post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "19 juin 2019",
+    likeCount : 9
   },
 
   {
@@ -52,6 +56,7 @@ export const questions = [
     lasteName: "Lando",
     post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "11 Janvier 2020",
+    likeCount : 2
   },
 
   {
@@ -63,8 +68,17 @@ export const questions = [
     lasteName: "ley",
     post: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.",
     date: "10 avril 1998",
+    likeCount : 22
   },
 ];
+export const commentRespons = [
+  {id : "AAA", id_respons : "1297" , repons : 'Izooo ts ampy tag ao ts mam' , name : 'Randria' , lasteName : 'KKKKKKKKK'},
+  {id : "BBBB", id_respons : "44" , repons : 'Izooo ts ampy tag ao ts mam' , name : 'Blague' , lasteName : 'nonoa'},
+  {id : "CCC", id_respons : "33" , repons : 'Izooo ts ampy tag ao ts mam' , name : 'Jean' , lasteName : 'KKKKKKKKK'},
+  {id : "DDDD", id_respons : "25" , repons : 'Izooo ts ampy tag ao ts mam' , name : 'Rajao' , lasteName : 'KKKKKKKKK'},
+  {id : "EEEE", id_respons : "44" , repons : 'Izooo ts ampy tag ao ts mam' , name : 'Fontsy' , lasteName : 'Nininao'},
+
+]
 export const respons = [
   { id: '1297', id_q: "aaa", nbrResponse: 6, isResolved: true, name: 'Lando', lasteName: 'Julien', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
   { id: '44', id_q: "aaa", nbrResponse: 6, isResolved: true, name: 'Michel', lasteName: 'Julien', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
@@ -110,4 +124,5 @@ export const post = [
   { id_s: '2199', tittle: 'Tittre ', content: 'Contenu', code: '', tagsId: '', isResolved: true, reportCont: 10, created: '20 mars 2019', file: 'file' },
   { id_s: '2199', tittle: 'Tittre ', content: 'Contenu', code: '', tagsId: '', isResolved: true, reportCont: 10, created: '20 mars 2019', file: 'file' },
 ]
+
 

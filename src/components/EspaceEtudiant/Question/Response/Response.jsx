@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import './Response.scss'
-import { questions , respons } from '../../../../data/questions'
+import { questions , respons } from '../../../../data/AllData'
 import avatar from '../../../../assets/avatars/face-4.jpg'
 export default function Response() {
   const { idPost } = useParams()

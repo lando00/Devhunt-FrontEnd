@@ -1,0 +1,53 @@
+.LiveItem{
+    display: flex;
+    flex-direction: column;
+    background-color: #A1A1A1;
+    height: 100px;
+    padding: 5px 0px;
+    border-radius: 2px;
+    .video{
+        background: #000;
+        height: 100px;
+        flex: 7;
+        padding: 0 5px;
+        .live{
+            width: 20px;
+            height: 15px;
+            background-image: url(../../../../../assets/icon/video2.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: anim1 1s infinite;
+        }
+        @keyframes anim1 {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: .5;
+            }
+        }
+    }
+    .info{
+        display: flex;
+        flex: 3;
+        align-items: center;
+        gap: 5px;
+        .pdp{
+            width: 35px;
+            height: 35px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        .user{
+            display: flex;
+            flex-direction: column;
+            .name{
+                font-size: 15px;
+                font-weight: 700;
+            }
+            .theme{
+                font-size: 10px;
+            }
+        }
+    }
+}

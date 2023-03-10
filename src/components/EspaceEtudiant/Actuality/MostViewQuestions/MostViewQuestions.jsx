@@ -1,5 +1,5 @@
 import React from 'react'
-import { questions } from '../../../../data/questions'
+import { questions } from '../../../../data/AllData'
 import ActualityItem from '../ActualityItem/ActualityItem'
 
 export default function MostViewQuestions() {

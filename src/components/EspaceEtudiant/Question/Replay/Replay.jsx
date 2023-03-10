@@ -1,63 +1,148 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import './Replay.scss'
 import avatar from '../../../../assets/avatars/face-5.jpg'
 import { v4 as uuidv4 } from 'uuid';
-import {respons, questions} from '../../../../data/questions'
-
+import { respons, questions, commentRespons } from '../../../../data/AllData'
 
 export default function Replay() {
 
-  const {idPost} = useParams();
+  const [showFormReponses, setShowFormReponses] = useState(false)
+  const [reponses, setReponses] = useState(respons)
+  const { idPost } = useParams();
+  const [replayPost , setReplayPost] = useState(
+    {
+      id: "",
+      nbrResponse: 0,
+      tittle: "",
+      isResolved: "",
+      name: '',
+      lasteName: "",
+      post: "",
+      date: ''
 
-  const post = questions.find(post => post.id === idPost);
-  
-  const [reponses, setReponses] = useState(respons);
+    }
+  )
+  const [replayPostRespons , setReplayPostRespons] = useState(
+    {
+      id : '',
+      id_respons : '',
+      respons : '',
+      name : '',
+      lasteName : '',
+      // date : ''
+    }
+  )
+  const [commentRespon, setCommentRespos] = useState(
+    [{
+      id_respons: '',
+      repons: '',
+      name: '',
+      lasteName: ""
+    }]
+  )
+ 
+  const [replayPEZZ, setReplay] = useState({
+    id: "",
+    nbrResponse: 0,
+    tittle: "",
+    isResolved: "",
+    name: '',
+    lasteName: "",
+    post: "",
+    date: ''
+  })
+
   const [comment, setComment] = useState({
-    name : 'John',
-    lasteName : 'Doe',
-    date : '10 mai 2022',
-    post : '',
+    name: 'John',
+    lasteName: 'Doe',
+    date: '10 mai 2022',
+    post: '',
   });
+  const post = questions.find(post => post.id === idPost);
 
-  const [showFormReponses, setShowFormReponses] = useState(false); 
-
+  const commentPost = respons.filter(({ id_q }) => id_q === post.id);
+  
+  const ShowFormReponses = (id_replay) => {
+    setReplay(reponses.find(({ id }) => id === id_replay));
+    setShowFormReponses(true);
+  }
   const handleChangeInput = (e) => {
-      setComment(state => {
-        return {
-          ...state,
-          post : e.target.value
-        }
-      })
+    setReplayPost(() =>{
+      return {
+        id : uuidv4(),
+        nbrResponse: 0,
+        tittle: "",
+        id_post : post.id,
+        isResolved : false ,
+        name : 'Ludo',
+        post : e.target.value,
+        lasteName : 'Andria',
+        date : '10 mars 2023',
+      }
+    })
+    setReplayPostRespons(state =>{
+      return{
+        id_respons : '',
+        post : e.target.value,
+        name : 'Team',
+        lasteName : 'Const'
+      }
+    })
+    setComment(state => {
+      return {
+        ...state,
+        post: e.target.value
+      }
+    })
   }
 
   const onAddReplay = (e) => {
-      e.preventDefault();
-      setReponses(state => {
-        return [
-          comment,
-          ...state
-        ]
-      })
-      setComment(state => {
-        return {
-          ...state,
-          post : '',
-        }
-      })
+    e.preventDefault();
+    replayPost.id  = uuidv4()
+    if(replayPost.post !== ''){
+      console.log(respons)
+      respons.push(replayPost);
+    }
+    setReplayPost(state =>{
+      return {
+        id : '',
+        id_post : '',
+        post : '',
+        name : '',
+        lasteName : '',
+        isResolved : false ,
+        date : ''
+      }
+    })
   }
+  const onAddReplayComment = (e) => {
+    e.preventDefault();
+    replayPostRespons.id  = uuidv4()
+    if(replayPostRespons.respons != ""){
+      console.log(replayPostRespons)
+      commentRespons.push(replayPostRespons);
+    }
+    setReplayPostRespons(state =>{
+      return{
+        id : '',
+        id_respons : '',
+        respons : '',
+        name : '',
+        lasteName : ''
+      }
+    });
 
-  const formReponseComment = (
-
-    <form className="add-replay" onSubmit={(e) => { onAddReplay(e) }}>
-        <div className="txt-btn">
-          <textarea className='textareaReplay' name="" id="" cols="30" rows="10" onChange={(e)=>{handleChangeInput(e)}} value={comment.post}></textarea>
-          <button type='submit' className='btn-post'>Repondre</button>
-        </div>
+    console.log(commentRespons)
+  }
+  const formComment = (
+    <form className="add-replay" onSubmit={(e) => { onAddReplayComment(e) }}>
+      <div className="txt-btn">
+        <textarea className='textareaReplay' name="" id="" cols="5" rows="5" onChange={(e) => { handleChangeInput(e) }} value={replayPostRespons.respons}></textarea>
+        <button type='submit' className='btn-post'>Repondre</button>
+      </div>
     </form>
-
   )
-
   return (
     <div className='response'>
       {post && (<div className="actuality-item">
@@ -77,14 +162,14 @@ export default function Replay() {
         <form className="add-replay" onSubmit={(e) => { onAddReplay(e) }}>
           <label htmlFor="">Votre reponse</label>
           <div className="txt-btn">
-            <textarea className='textareaReplay' name="" id="" cols="30" rows="10" onChange={(e)=>{handleChangeInput(e)}} value={comment.post}></textarea>
+            <textarea className='textareaReplay' name="" id="" cols="30" rows="8" onChange={(e) => { handleChangeInput(e) }} value={comment.post}></textarea>
             <button type='submit' className='btn-post'>Commenter</button>
           </div>
         </form>
         <h2>Tous les reponse</h2>
         {
-          reponses.map(({ date, isResolved, name, lasteName, post }, index) =>
-          (<div key={index} className="actuality-item">
+          commentPost.map(({ date, isResolved, name, lasteName, post, id }) =>
+          (<div key={id} className="actuality-item">
             <img src={avatar} alt="" className='pdp' />
             <div className="detail-post">
               <div className="head-post">
@@ -94,32 +179,33 @@ export default function Replay() {
               <div className="detail">
                 <div className="post"> {post}</div>
               </div>
-               
-              <div key={index} className="actuality-item reponses">
-                <img src={avatar} alt="" className='pdp' />
-                <div className="detail-post">
-                  <div className="head-post">
-                    <div className="name"> {name} {lasteName}</div>
-                    <div className="date"> {date} </div>
-                  </div>
-                  <div className="detail">
-                    <div className="post"> {post}</div>
+              {replayPEZZ.id !== id  &&
+                (<div className="replay-post-single">
+                  <button type='button' onClick={() => { ShowFormReponses(id) }}>
+                    <i className="fas fa-reply icon-replay"></i>
+                    Repondre
+                  </button>
+                </div>)
+              }
+              {useEffect(() => {
+                setCommentRespos(commentRespons.filter(({ id_respons }) => id_respons === id))
+              }, [])}
+              {commentRespon && commentRespon.map(({ name, lasteName, repons }) => (
+                <div key={id} className="actuality-item reponses">
+                  <img src={avatar} alt="" className='pdp' />
+                  <div className="detail-post">
+                    <div className="head-post">
+                      <div className="name"> {name} {lasteName}</div>
+                      {/* <div className="date"> {date} </div> */}
+                    </div>
+                    <div className="detail">
+                      <div className="post"> {repons}</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {showFormReponses && formReponseComment}
-
-              <div className="replay-post-single">
-                <button type='button' onClick={() => {setShowFormReponses(true)}}>
-                  <i className="fas fa-reply icon-replay"></i>
-                  Repondre
-                </button>
-              </div>
-              
-
+              ))}
+              {replayPEZZ.id === id && showFormReponses && formComment}
             </div>
-            
           </div>))
         }
       </div>

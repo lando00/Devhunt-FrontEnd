@@ -1,6 +1,6 @@
 import React from 'react'
-import { users } from '../../../../data/questions'
-import './setting.scss'
+import { users } from '../../../../data/AllData'
+import './Setting.scss'
 export default function Setting() {
   const user = users.find(({ serealNumber }) => serealNumber === '2199')
   function update (e){

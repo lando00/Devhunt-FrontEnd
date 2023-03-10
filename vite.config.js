@@ -5,8 +5,9 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   server: {
     proxy: {
-      "/devHunt2": "http://192.168.32.66:8000",
+      "/devHunt2": "http://192.168.137.106:8000",
     },
   },
   plugins: [react()],
+  // comment rediriger un lien dans outlet réagir
 });
