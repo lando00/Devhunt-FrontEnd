@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
+import axios from 'axios';
+
 export default function Login() {
 
   const [serialNumber, setSerialNumber] = useState('');
   const [passWord, setPassWord] = useState('');
+
+  const login = () => {
+    axios.get("/devHunt2/students")
+    .then(rep => {
+      console.log(rep)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }
 
   return (
     <div className='loginContainer'>
@@ -20,7 +32,7 @@ export default function Login() {
           <span>Mot de passe oublié?</span>
         </p>
 
-        <Link to="/actuality/recentQuestions">
+        <Link to="#" onClick={login}>
             Login
         </Link>
 
