@@ -20,16 +20,16 @@ const populary =  actuality.map(({ id , nbrResponse , tittle , isResolved , name
           <div className="date"> {date} </div>
         </div>
         <div className="detail">
-          <div className="tittle"> {tittle} {isResolved ? <div className="resolved">(Résolue)</div> : <div className="unresolved" >(Non Resolue)</div>}</div>
+          <div className="tittle"> {tittle} {isResolved ? <div className="resolved">(Résolue)</div> : <div className="unresolved" >(Non résolue)</div>}</div>
           <div className="post"> {post}</div>
           <div className="replay">
             <NavLink to={`/questions/question/${id}`}>
-              <div className="answer">Reponse : {nbrResponse}</div>
+              <div className="answer">Réponses : {nbrResponse}</div>
             </NavLink>
             <NavLink to={`/actuality/replay/${id}`}>
               <div className="replay-post">
                 <div className="icon-replay" />
-                Repondre
+                Répondre
               </div>
             </NavLink>
           </div>
