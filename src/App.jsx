@@ -38,7 +38,7 @@ function App() {
             <Route path="/actuality/recentQuestions" element={<RecentQuestions />} />
             <Route path="/actuality/popularQuestions" element={<PopularQuestions />} />
             <Route path="/actuality/MostViewQuestions" element={<MostViewQuestions />} />
-            <Route path="/actuality/replay/:idPost" element={<Replay />}></Route>
+            <Route path="/actuality/replay/:idQuestion" element={<Replay />}></Route>
           </Route>
           <Route path="/notifications" element={<Notification />}>
             <Route path='/notifications/all' element={<All />}></Route>
