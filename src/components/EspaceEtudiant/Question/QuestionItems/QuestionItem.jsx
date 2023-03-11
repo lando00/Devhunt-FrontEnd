@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import avatar from '../../../../assets/avatars/face-8.jpg'
-
+import { onLike } from '../../../../data/function'
 
 export default function QuestionItem({ questions }) {
-  const onLike = () => {
-    const like = document.getElementsByClassName('btn-like')
-    console.log(like)
-  }
+  const [increment, setIncrement] = useState(false)
+  const [like, setLike] = useState(12)
+  const likeColor = useRef(null)
 
+    const onlikes = () => {
+      setIncrement(!increment)
+      if(increment){
+        likeColor.current.classList.add('liked');
+      }
+      else{
+        likeColor.current.classList.remove('liked');
+      }
+      setLike(onLike(like, increment))
+      console.log(likeColor)
+    }
   const post = questions.map(({ _id, content, created, isResolved, likeCount, title }) => (
     <div key={_id} className="actuality-item">
       <img src={avatar} alt="" className='pdp' />
@@ -21,12 +31,12 @@ export default function QuestionItem({ questions }) {
           <div className="tittle"> {title} {isResolved ? <div className="resolved">(Résolue)</div> : <div className="unresolved" >(Non résolue)</div>}</div>
           <div className="post"> {content} </div>
           <div className="replay">
-            <div onClick={onLike} className="btn-like">
-              J'aime : {likeCount}
+            <div onClick={onlikes} className="btn-like" ref={likeColor}>
+              J'aime : {like}
             </div>
             <NavLink to={`/questions/question/${_id}`}>
               <div className="answer">Réponse(s) :  </div>
-            </NavLink> 
+            </NavLink>
           </div>
         </div>
       </div>
