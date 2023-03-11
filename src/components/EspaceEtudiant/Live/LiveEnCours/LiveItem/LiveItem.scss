@@ -6,7 +6,11 @@
     padding: 5px 0px;
     border-radius: 2px;
     .video{
-        background: #000;
+        background-image: url(../../../../../assets/icon/play.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-color: #555;
         height: 100px;
         flex: 7;
         padding: 0 5px;
