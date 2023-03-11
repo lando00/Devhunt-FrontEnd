@@ -17,12 +17,13 @@ export default function RecentQuestions () {
   }, [])
 console.log(actualities)
 const actualitiesItems = actualities.map(({ _id, created, title, isResolved, likeCount, content, idStudent }) => {
-    return (
+
+  return (
       <div key={_id} className="actuality-items">
         <img src={avatar} alt="" className="pdp" />
         <div className="detail-post">
           <div className="head-post">
-            <div className="name">{}</div>
+            <div className="name">{idStudent.name} {idStudent.secondName}</div>
             <div className="date"> {created} </div>
           </div>
           <div className="detail">
