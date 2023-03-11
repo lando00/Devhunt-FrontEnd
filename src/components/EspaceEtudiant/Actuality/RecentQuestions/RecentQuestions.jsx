@@ -1,40 +1,64 @@
-import React, { useState } from 'react'
-import avatar from '../../../../assets/avatars/face-4.jpg'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import {questions} from '../../../../data/AllData'
+import avatar from '../../../../assets/avatars/face-8.jpg'
 import ActualityItem from '../ActualityItem/ActualityItem'
+export default function RecentQuestions () {
 
-export default function RecentQuestions() {
-  const [user, setUser] = useState(questions);
+  const [actualities, setActualities] = useState([])
+  const [student, setStudent] = useState([])
 
-  const Actu = user.map(({ nbrResponse, isResolved, name, tittle, post, lasteName, date, id }, index) => (
-    <div key={index} className="actuality-item">
-      <img src={avatar} alt="" className='pdp' />
-      <div className="detail-post">
-        <div className="head-post">
-          <div className="name">{lasteName} {name}</div>
-          <div className="date"> {date} </div>
-        </div>
-        <div className="detail">
-          <div className="tittle"> {tittle} {isResolved ? <div className="resolved">(Résolue)</div> : <div className="unresolved" >(Non resolue)</div>}</div>
-          <div className="post"> {post}</div>
-          <div className="replay">
-            <NavLink to={`/questions/question/${index}`}>
-              <div className="answer">Reponse : {nbrResponse}</div>
-            </NavLink>
-            <NavLink to={`/actuality/replay/${id}`}>
-              <div className="replay-post">
-                <div className="icon-replay" />
-                Repondre
-              </div>
-            </NavLink>
+  useEffect(()=>{
+    const fetchActualities = async() =>{
+      const response = await axios.get('/devHunt2/students/posts/all')
+      setActualities(response.data.data)
+    }
+    fetchActualities()
+  }, [])
+console.log(actualities)
+const actualitiesItems = actualities.map(({ _id, created, title, isResolved, likeCount, content, idStudent }) => {
+    return (
+      <div key={_id} className="actuality-items">
+        <img src={avatar} alt="" className="pdp" />
+        <div className="detail-post">
+          <div className="head-post">
+            <div className="name">{}</div>
+            <div className="date"> {created} </div>
+          </div>
+          <div className="detail">
+            <div className="tittle">
+              {title}{" "}
+              {isResolved ? (
+                <div className="resolved">(Résolue)</div>
+              ) : (
+                <div className="unresolved">(Non résolue)</div>
+              )}
+            </div>
+            <div className="post"> {content}</div>
+            <div className="replay">
+              <div className="btn-like">J'aime : {likeCount}</div>
+              <div className="btn-singal">Singaler</div>
+              <NavLink to={`/questions/question/${_id}`}>
+                <div className="answer">Réponses : {}</div>
+              </NavLink>
+              <NavLink to={`/actuality/replay/${_id}`}>
+                <div className="replay-post">
+                  <div className="icon-replay" />
+                  Répondre
+                </div>
+              </NavLink>
+            </div>
           </div>
         </div>
       </div>
-    </div>))
-  return (
-    <div className='containe-actuality'>
-      <ActualityItem actuality={questions}></ActualityItem>
+    );
+  });
+  
+  return(
+    <div className="all-actuality">
+      {
+      actualitiesItems
+     }
     </div>
   )
-}
+  }
