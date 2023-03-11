@@ -2,13 +2,12 @@ import './Live.scss'
 import React, { useRef, useEffect, useState } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:8000/devHunt2/students/lives/videos', {
+const socket = io('http://localhost:4000', {
     withCredentials: true,
     extraHeaders: {
         "my-custom-header": "abcd"
     }
 });
-
 
 export default function Video({ showSetting, isOwner }) {
 
