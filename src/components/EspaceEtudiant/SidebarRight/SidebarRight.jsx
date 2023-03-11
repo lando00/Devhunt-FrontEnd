@@ -1,37 +1,24 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import './SidebarRight.scss'
 
 export default function SidebarRight() {
-  const [user, setUser] = useState(
-    [
-      { nbrResponse: 4, tittle: 'Tittre du post', isResolved: true, name: 'mika', lasteName: 'tieko', post: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, esse asperiores? Veritatis ipsa eius vero ea mollitia consequatur pariatur ut quae. Reprehenderit odio delectus qui provident molestias voluptatibus? Veniam, quae.', date: '10 mars 2023' },
-    ]
-  )
-  const Actu = user.map(({ nbrResponse, isResolved, name, tittle, post, lasteName, date }, index) => (
-    <div key={index} className="actuality-item">
-      <div className="detail-post">
-        <div className="top">
-          <div className="pdp"></div>
-          <div className="head-post">
-            <div className="name">{lasteName} {name}</div>
-            <div className="date"> {date} </div>
-          </div>
-        </div>
-        <div className="detail">
-          <div className="tittle"> {tittle} {isResolved ? <div className="resolved">Résolue</div> : <div className="not-resolved">Non Resolue</div>}</div>
-          <div className="post"> {post}</div>
-          <div className="replay">
-            <div className="answer">Réponse : {nbrResponse}</div>
-            {/* <div className="replay-post">Repondre</div> */}
-          </div>
-        </div>
-      </div>
-    </div>))
+
+  const [questions, setQuestions] = useState([])
+
+  useEffect(()=>{
+    const fetchQuestions = async()=>{
+      const response = await axios.get('/devHunt2/students/posts/all')
+      setQuestions(response.data.data)
+    }
+    fetchQuestions()
+  }, [])
+
   return (
     <div className='sidebar-right'>
       <div className="containe">
         <div className="question">
-          <div className="item"> <div className="txt-question">Questions</div><span>11</span></div>
+          <div className="item"> <div className="txt-question">Questions</div><span>{questions.length}</span></div>
           <div className="item"><div className="txt-answer">Réponses</div><span>30</span></div>
         </div>
         <div className="tag">

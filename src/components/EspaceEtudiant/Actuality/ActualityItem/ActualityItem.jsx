@@ -12,7 +12,7 @@ export default function ActualityItem({ actuality }) {
   // post: string;
   // date: string;
 const populary =  actuality.map(({ id , nbrResponse , tittle , isResolved , name , lasteName , post , date}) => (
-    <div key={id} className="actuality-item">
+    <div key={id} className="actuality-items">
       <img src={avatar} alt="" className='pdp' />
       <div className="detail-post">
         <div className="head-post">
@@ -23,6 +23,12 @@ const populary =  actuality.map(({ id , nbrResponse , tittle , isResolved , name
           <div className="tittle"> {tittle} {isResolved ? <div className="resolved">(Résolue)</div> : <div className="unresolved" >(Non résolue)</div>}</div>
           <div className="post"> {post}</div>
           <div className="replay">
+          <div className="btn-like">
+              J'aime : 
+            </div>
+            <div className="btn-singal">
+              Singaler
+            </div>
             <NavLink to={`/questions/question/${id}`}>
               <div className="answer">Réponses : {nbrResponse}</div>
             </NavLink>
@@ -38,7 +44,7 @@ const populary =  actuality.map(({ id , nbrResponse , tittle , isResolved , name
     </div>
   ))
   return (
-    <div className="all-actualy">
+    <div className="all-actuality">
       { populary }
     </div>
   )
